@@ -17,7 +17,6 @@
 		F3DAC7212C85EC040035BF02 /* moyeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7202C85EC040035BF02 /* moyeoUITests.swift */; };
 		F3DAC7232C85EC040035BF02 /* moyeoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7222C85EC040035BF02 /* moyeoUITestsLaunchTests.swift */; };
 		F3DAC74A2C8706C40035BF02 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7482C8706C40035BF02 /* README.md */; };
-		F3DAC7512C870F100035BF02 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7502C870F100035BF02 /* Secrets.xcconfig */; };
 		F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7532C8711D80035BF02 /* NaverMap.swift */; };
 		F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7552C8711EB0035BF02 /* Coordinator.swift */; };
 		FC65FB68E9CE20AF016071AE /* Pods_moyeoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */; };
@@ -143,13 +142,13 @@
 		F3DAC7042C85EC030035BF02 /* moyeo */ = {
 			isa = PBXGroup;
 			children = (
+				F3DAC7592C871AC00035BF02 /* Resource */,
 				F3DAC7522C870F890035BF02 /* Info.plist */,
 				F3DAC7462C8706C40035BF02 /* config */,
 				F3DAC7052C85EC030035BF02 /* moyeoApp.swift */,
 				F3DAC7072C85EC030035BF02 /* ContentView.swift */,
 				F3DAC7532C8711D80035BF02 /* NaverMap.swift */,
 				F3DAC7552C8711EB0035BF02 /* Coordinator.swift */,
-				F3DAC7092C85EC040035BF02 /* Assets.xcassets */,
 				F3DAC70B2C85EC040035BF02 /* Preview Content */,
 			);
 			path = moyeo;
@@ -188,6 +187,22 @@
 			);
 			path = config;
 			sourceTree = SOURCE_ROOT;
+		};
+		F3DAC7592C871AC00035BF02 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F3DAC75A2C871AE90035BF02 /* Assets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F3DAC75A2C871AE90035BF02 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F3DAC7092C85EC040035BF02 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -298,7 +313,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3DAC7512C870F100035BF02 /* Secrets.xcconfig in Resources */,
 				F3DAC70D2C85EC040035BF02 /* Preview Assets.xcassets in Resources */,
 				F3DAC74A2C8706C40035BF02 /* README.md in Resources */,
 				F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */,
