@@ -16,6 +16,8 @@
 		F3DAC7172C85EC040035BF02 /* moyeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7162C85EC040035BF02 /* moyeoTests.swift */; };
 		F3DAC7212C85EC040035BF02 /* moyeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7202C85EC040035BF02 /* moyeoUITests.swift */; };
 		F3DAC7232C85EC040035BF02 /* moyeoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7222C85EC040035BF02 /* moyeoUITestsLaunchTests.swift */; };
+		F3DAC74A2C8706C40035BF02 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7482C8706C40035BF02 /* README.md */; };
+		F3DAC7512C870F100035BF02 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7502C870F100035BF02 /* Secrets.xcconfig */; };
 		FC65FB68E9CE20AF016071AE /* Pods_moyeoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		F3DAC71C2C85EC040035BF02 /* moyeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moyeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC7202C85EC040035BF02 /* moyeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoUITests.swift; sourceTree = "<group>"; };
 		F3DAC7222C85EC040035BF02 /* moyeoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3DAC7482C8706C40035BF02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F3DAC7502C870F100035BF02 /* Secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		F812A393E327E92ACBDCD526 /* Pods-moyeo-moyeoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo-moyeoUITests.debug.xcconfig"; path = "Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +110,6 @@
 				D39513F7C23DEDECCA09ED22 /* Pods-moyeoTests.debug.xcconfig */,
 				C3F056F3A2B3BA0F48217264 /* Pods-moyeoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -135,6 +138,7 @@
 		F3DAC7042C85EC030035BF02 /* moyeo */ = {
 			isa = PBXGroup;
 			children = (
+				F3DAC7462C8706C40035BF02 /* config */,
 				F3DAC7052C85EC030035BF02 /* moyeoApp.swift */,
 				F3DAC7072C85EC030035BF02 /* ContentView.swift */,
 				F3DAC7092C85EC040035BF02 /* Assets.xcassets */,
@@ -167,6 +171,15 @@
 			);
 			path = moyeoUITests;
 			sourceTree = "<group>";
+		};
+		F3DAC7462C8706C40035BF02 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				F3DAC7502C870F100035BF02 /* Secrets.xcconfig */,
+				F3DAC7482C8706C40035BF02 /* README.md */,
+			);
+			path = config;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -277,7 +290,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DAC7512C870F100035BF02 /* Secrets.xcconfig in Resources */,
 				F3DAC70D2C85EC040035BF02 /* Preview Assets.xcassets in Resources */,
+				F3DAC74A2C8706C40035BF02 /* README.md in Resources */,
 				F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

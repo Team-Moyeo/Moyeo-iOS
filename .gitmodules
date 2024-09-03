@@ -1,0 +1,3 @@
+[submodule "moyeo/config"]
+	path = moyeo/config
+	url = https://github.com/Team-Moyeo/Moyeo-iOS-Config.git
