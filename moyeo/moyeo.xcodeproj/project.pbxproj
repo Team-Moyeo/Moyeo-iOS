@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E03E68DE0E8628FDB17447F /* Pods_moyeo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FC1A7555860E9B50429C23 /* Pods_moyeo.framework */; };
+		6E7B22BB7AE411CBAC88FB8A /* Pods_moyeo_moyeoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7B03907A8C5A74ECC7A971 /* Pods_moyeo_moyeoUITests.framework */; };
+		F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7052C85EC030035BF02 /* moyeoApp.swift */; };
+		F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7072C85EC030035BF02 /* ContentView.swift */; };
+		F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7092C85EC040035BF02 /* Assets.xcassets */; };
+		F3DAC70D2C85EC040035BF02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC70C2C85EC040035BF02 /* Preview Assets.xcassets */; };
+		F3DAC7172C85EC040035BF02 /* moyeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7162C85EC040035BF02 /* moyeoTests.swift */; };
+		F3DAC7212C85EC040035BF02 /* moyeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7202C85EC040035BF02 /* moyeoUITests.swift */; };
+		F3DAC7232C85EC040035BF02 /* moyeoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7222C85EC040035BF02 /* moyeoUITestsLaunchTests.swift */; };
+		F3DAC74A2C8706C40035BF02 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7482C8706C40035BF02 /* README.md */; };
+		F3DAC7512C870F100035BF02 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7502C870F100035BF02 /* Secrets.xcconfig */; };
+		F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7532C8711D80035BF02 /* NaverMap.swift */; };
+		F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7552C8711EB0035BF02 /* Coordinator.swift */; };
+		FC65FB68E9CE20AF016071AE /* Pods_moyeoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3DAC7132C85EC040035BF02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3DAC6FA2C85EC020035BF02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3DAC7012C85EC030035BF02;
+			remoteInfo = moyeo;
+		};
+		F3DAC71D2C85EC040035BF02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3DAC6FA2C85EC020035BF02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3DAC7012C85EC030035BF02;
+			remoteInfo = moyeo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		252385366E691040C23F1F5E /* Pods-moyeo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo.debug.xcconfig"; path = "Target Support Files/Pods-moyeo/Pods-moyeo.debug.xcconfig"; sourceTree = "<group>"; };
+		4F7B03907A8C5A74ECC7A971 /* Pods_moyeo_moyeoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moyeo_moyeoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74827A874D944FA7AF9AB70F /* Pods-moyeo-moyeoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo-moyeoUITests.release.xcconfig"; path = "Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		92FA5BAC6289BF3AE3729A5E /* Pods-moyeo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo.release.xcconfig"; path = "Target Support Files/Pods-moyeo/Pods-moyeo.release.xcconfig"; sourceTree = "<group>"; };
+		B5FC1A7555860E9B50429C23 /* Pods_moyeo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moyeo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F056F3A2B3BA0F48217264 /* Pods-moyeoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeoTests.release.xcconfig"; path = "Target Support Files/Pods-moyeoTests/Pods-moyeoTests.release.xcconfig"; sourceTree = "<group>"; };
+		D39513F7C23DEDECCA09ED22 /* Pods-moyeoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeoTests.debug.xcconfig"; path = "Target Support Files/Pods-moyeoTests/Pods-moyeoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moyeoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3DAC7022C85EC030035BF02 /* moyeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moyeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3DAC7052C85EC030035BF02 /* moyeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoApp.swift; sourceTree = "<group>"; };
+		F3DAC7072C85EC030035BF02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F3DAC7092C85EC040035BF02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3DAC70C2C85EC040035BF02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F3DAC7122C85EC040035BF02 /* moyeoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moyeoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3DAC7162C85EC040035BF02 /* moyeoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoTests.swift; sourceTree = "<group>"; };
+		F3DAC71C2C85EC040035BF02 /* moyeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moyeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3DAC7202C85EC040035BF02 /* moyeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoUITests.swift; sourceTree = "<group>"; };
+		F3DAC7222C85EC040035BF02 /* moyeoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3DAC7482C8706C40035BF02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F3DAC7502C870F100035BF02 /* Secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		F3DAC7522C870F890035BF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F3DAC7532C8711D80035BF02 /* NaverMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMap.swift; sourceTree = "<group>"; };
+		F3DAC7552C8711EB0035BF02 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F812A393E327E92ACBDCD526 /* Pods-moyeo-moyeoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo-moyeoUITests.debug.xcconfig"; path = "Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3DAC6FF2C85EC030035BF02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E03E68DE0E8628FDB17447F /* Pods_moyeo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3DAC70F2C85EC040035BF02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC65FB68E9CE20AF016071AE /* Pods_moyeoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3DAC7192C85EC040035BF02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7B22BB7AE411CBAC88FB8A /* Pods_moyeo_moyeoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54CE03B4DB462440654531F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5FC1A7555860E9B50429C23 /* Pods_moyeo.framework */,
+				4F7B03907A8C5A74ECC7A971 /* Pods_moyeo_moyeoUITests.framework */,
+				EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAABB5BBCD2FDE3B07BE5EEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				252385366E691040C23F1F5E /* Pods-moyeo.debug.xcconfig */,
+				92FA5BAC6289BF3AE3729A5E /* Pods-moyeo.release.xcconfig */,
+				F812A393E327E92ACBDCD526 /* Pods-moyeo-moyeoUITests.debug.xcconfig */,
+				74827A874D944FA7AF9AB70F /* Pods-moyeo-moyeoUITests.release.xcconfig */,
+				D39513F7C23DEDECCA09ED22 /* Pods-moyeoTests.debug.xcconfig */,
+				C3F056F3A2B3BA0F48217264 /* Pods-moyeoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3DAC6F92C85EC020035BF02 = {
+			isa = PBXGroup;
+			children = (
+				F3DAC7042C85EC030035BF02 /* moyeo */,
+				F3DAC7152C85EC040035BF02 /* moyeoTests */,
+				F3DAC71F2C85EC040035BF02 /* moyeoUITests */,
+				F3DAC7032C85EC030035BF02 /* Products */,
+				CAABB5BBCD2FDE3B07BE5EEC /* Pods */,
+				54CE03B4DB462440654531F7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3DAC7032C85EC030035BF02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3DAC7022C85EC030035BF02 /* moyeo.app */,
+				F3DAC7122C85EC040035BF02 /* moyeoTests.xctest */,
+				F3DAC71C2C85EC040035BF02 /* moyeoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3DAC7042C85EC030035BF02 /* moyeo */ = {
+			isa = PBXGroup;
+			children = (
+				F3DAC7522C870F890035BF02 /* Info.plist */,
+				F3DAC7462C8706C40035BF02 /* config */,
+				F3DAC7052C85EC030035BF02 /* moyeoApp.swift */,
+				F3DAC7072C85EC030035BF02 /* ContentView.swift */,
+				F3DAC7532C8711D80035BF02 /* NaverMap.swift */,
+				F3DAC7552C8711EB0035BF02 /* Coordinator.swift */,
+				F3DAC7092C85EC040035BF02 /* Assets.xcassets */,
+				F3DAC70B2C85EC040035BF02 /* Preview Content */,
+			);
+			path = moyeo;
+			sourceTree = "<group>";
+		};
+		F3DAC70B2C85EC040035BF02 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F3DAC70C2C85EC040035BF02 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F3DAC7152C85EC040035BF02 /* moyeoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3DAC7162C85EC040035BF02 /* moyeoTests.swift */,
+			);
+			path = moyeoTests;
+			sourceTree = "<group>";
+		};
+		F3DAC71F2C85EC040035BF02 /* moyeoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3DAC7202C85EC040035BF02 /* moyeoUITests.swift */,
+				F3DAC7222C85EC040035BF02 /* moyeoUITestsLaunchTests.swift */,
+			);
+			path = moyeoUITests;
+			sourceTree = "<group>";
+		};
+		F3DAC7462C8706C40035BF02 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				F3DAC7502C870F100035BF02 /* Secrets.xcconfig */,
+				F3DAC7482C8706C40035BF02 /* README.md */,
+			);
+			path = config;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3DAC7012C85EC030035BF02 /* moyeo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3DAC7262C85EC040035BF02 /* Build configuration list for PBXNativeTarget "moyeo" */;
+			buildPhases = (
+				AC86B06DFAA53AA61071181A /* [CP] Check Pods Manifest.lock */,
+				F3DAC6FE2C85EC030035BF02 /* Sources */,
+				F3DAC6FF2C85EC030035BF02 /* Frameworks */,
+				F3DAC7002C85EC030035BF02 /* Resources */,
+				FC7239FC0C5DB60382272959 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = moyeo;
+			productName = moyeo;
+			productReference = F3DAC7022C85EC030035BF02 /* moyeo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3DAC7112C85EC040035BF02 /* moyeoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3DAC7292C85EC040035BF02 /* Build configuration list for PBXNativeTarget "moyeoTests" */;
+			buildPhases = (
+				19DE5F586B55B38DFB33458C /* [CP] Check Pods Manifest.lock */,
+				F3DAC70E2C85EC040035BF02 /* Sources */,
+				F3DAC70F2C85EC040035BF02 /* Frameworks */,
+				F3DAC7102C85EC040035BF02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3DAC7142C85EC040035BF02 /* PBXTargetDependency */,
+			);
+			name = moyeoTests;
+			productName = moyeoTests;
+			productReference = F3DAC7122C85EC040035BF02 /* moyeoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3DAC71B2C85EC040035BF02 /* moyeoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3DAC72C2C85EC040035BF02 /* Build configuration list for PBXNativeTarget "moyeoUITests" */;
+			buildPhases = (
+				674A4C84C173C80C284ECAB3 /* [CP] Check Pods Manifest.lock */,
+				F3DAC7182C85EC040035BF02 /* Sources */,
+				F3DAC7192C85EC040035BF02 /* Frameworks */,
+				F3DAC71A2C85EC040035BF02 /* Resources */,
+				F0D0D4BE03AA99C8CC4C78D1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3DAC71E2C85EC040035BF02 /* PBXTargetDependency */,
+			);
+			name = moyeoUITests;
+			productName = moyeoUITests;
+			productReference = F3DAC71C2C85EC040035BF02 /* moyeoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3DAC6FA2C85EC020035BF02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					F3DAC7012C85EC030035BF02 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					F3DAC7112C85EC040035BF02 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F3DAC7012C85EC030035BF02;
+					};
+					F3DAC71B2C85EC040035BF02 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F3DAC7012C85EC030035BF02;
+					};
+				};
+			};
+			buildConfigurationList = F3DAC6FD2C85EC020035BF02 /* Build configuration list for PBXProject "moyeo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3DAC6F92C85EC020035BF02;
+			productRefGroup = F3DAC7032C85EC030035BF02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3DAC7012C85EC030035BF02 /* moyeo */,
+				F3DAC7112C85EC040035BF02 /* moyeoTests */,
+				F3DAC71B2C85EC040035BF02 /* moyeoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3DAC7002C85EC030035BF02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3DAC7512C870F100035BF02 /* Secrets.xcconfig in Resources */,
+				F3DAC70D2C85EC040035BF02 /* Preview Assets.xcassets in Resources */,
+				F3DAC74A2C8706C40035BF02 /* README.md in Resources */,
+				F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3DAC7102C85EC040035BF02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3DAC71A2C85EC040035BF02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19DE5F586B55B38DFB33458C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moyeoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		674A4C84C173C80C284ECAB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moyeo-moyeoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC86B06DFAA53AA61071181A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moyeo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0D0D4BE03AA99C8CC4C78D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7239FC0C5DB60382272959 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moyeo/Pods-moyeo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moyeo/Pods-moyeo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moyeo/Pods-moyeo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3DAC6FE2C85EC030035BF02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */,
+				F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */,
+				F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */,
+				F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3DAC70E2C85EC040035BF02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3DAC7172C85EC040035BF02 /* moyeoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3DAC7182C85EC040035BF02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3DAC7232C85EC040035BF02 /* moyeoUITestsLaunchTests.swift in Sources */,
+				F3DAC7212C85EC040035BF02 /* moyeoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3DAC7142C85EC040035BF02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3DAC7012C85EC030035BF02 /* moyeo */;
+			targetProxy = F3DAC7132C85EC040035BF02 /* PBXContainerItemProxy */;
+		};
+		F3DAC71E2C85EC040035BF02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3DAC7012C85EC030035BF02 /* moyeo */;
+			targetProxy = F3DAC71D2C85EC040035BF02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F3DAC7242C85EC040035BF02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3DAC7502C870F100035BF02 /* Secrets.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3DAC7252C85EC040035BF02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3DAC7502C870F100035BF02 /* Secrets.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3DAC7272C85EC040035BF02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 252385366E691040C23F1F5E /* Pods-moyeo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"moyeo/Preview Content\"";
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = moyeo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.moyeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3DAC7282C85EC040035BF02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92FA5BAC6289BF3AE3729A5E /* Pods-moyeo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"moyeo/Preview Content\"";
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = moyeo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.moyeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3DAC72A2C85EC040035BF02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D39513F7C23DEDECCA09ED22 /* Pods-moyeoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.moyeoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moyeo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/moyeo";
+			};
+			name = Debug;
+		};
+		F3DAC72B2C85EC040035BF02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3F056F3A2B3BA0F48217264 /* Pods-moyeoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.moyeoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moyeo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/moyeo";
+			};
+			name = Release;
+		};
+		F3DAC72D2C85EC040035BF02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F812A393E327E92ACBDCD526 /* Pods-moyeo-moyeoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.moyeoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = moyeo;
+			};
+			name = Debug;
+		};
+		F3DAC72E2C85EC040035BF02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74827A874D944FA7AF9AB70F /* Pods-moyeo-moyeoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.moyeoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = moyeo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3DAC6FD2C85EC020035BF02 /* Build configuration list for PBXProject "moyeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3DAC7242C85EC040035BF02 /* Debug */,
+				F3DAC7252C85EC040035BF02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3DAC7262C85EC040035BF02 /* Build configuration list for PBXNativeTarget "moyeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3DAC7272C85EC040035BF02 /* Debug */,
+				F3DAC7282C85EC040035BF02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3DAC7292C85EC040035BF02 /* Build configuration list for PBXNativeTarget "moyeoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3DAC72A2C85EC040035BF02 /* Debug */,
+				F3DAC72B2C85EC040035BF02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3DAC72C2C85EC040035BF02 /* Build configuration list for PBXNativeTarget "moyeoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3DAC72D2C85EC040035BF02 /* Debug */,
+				F3DAC72E2C85EC040035BF02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3DAC6FA2C85EC020035BF02 /* Project object */;
+}
