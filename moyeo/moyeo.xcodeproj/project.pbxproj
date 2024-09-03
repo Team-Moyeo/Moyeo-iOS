@@ -18,6 +18,8 @@
 		F3DAC7232C85EC040035BF02 /* moyeoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7222C85EC040035BF02 /* moyeoUITestsLaunchTests.swift */; };
 		F3DAC74A2C8706C40035BF02 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7482C8706C40035BF02 /* README.md */; };
 		F3DAC7512C870F100035BF02 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7502C870F100035BF02 /* Secrets.xcconfig */; };
+		F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7532C8711D80035BF02 /* NaverMap.swift */; };
+		F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7552C8711EB0035BF02 /* Coordinator.swift */; };
 		FC65FB68E9CE20AF016071AE /* Pods_moyeoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,9 @@
 		F3DAC7222C85EC040035BF02 /* moyeoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F3DAC7482C8706C40035BF02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F3DAC7502C870F100035BF02 /* Secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		F3DAC7522C870F890035BF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F3DAC7532C8711D80035BF02 /* NaverMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMap.swift; sourceTree = "<group>"; };
+		F3DAC7552C8711EB0035BF02 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F812A393E327E92ACBDCD526 /* Pods-moyeo-moyeoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo-moyeoUITests.debug.xcconfig"; path = "Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,9 +143,12 @@
 		F3DAC7042C85EC030035BF02 /* moyeo */ = {
 			isa = PBXGroup;
 			children = (
+				F3DAC7522C870F890035BF02 /* Info.plist */,
 				F3DAC7462C8706C40035BF02 /* config */,
 				F3DAC7052C85EC030035BF02 /* moyeoApp.swift */,
 				F3DAC7072C85EC030035BF02 /* ContentView.swift */,
+				F3DAC7532C8711D80035BF02 /* NaverMap.swift */,
+				F3DAC7552C8711EB0035BF02 /* Coordinator.swift */,
 				F3DAC7092C85EC040035BF02 /* Assets.xcassets */,
 				F3DAC70B2C85EC040035BF02 /* Preview Content */,
 			);
@@ -421,6 +429,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */,
+				F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */,
 				F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */,
 				F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */,
 			);
@@ -461,6 +471,7 @@
 /* Begin XCBuildConfiguration section */
 		F3DAC7242C85EC040035BF02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3DAC7502C870F100035BF02 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -496,7 +507,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -524,6 +535,7 @@
 		};
 		F3DAC7252C85EC040035BF02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3DAC7502C870F100035BF02 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -559,7 +571,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -590,6 +602,7 @@
 				DEVELOPMENT_TEAM = U5F437QJA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = moyeo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -620,6 +633,7 @@
 				DEVELOPMENT_TEAM = U5F437QJA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = moyeo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
