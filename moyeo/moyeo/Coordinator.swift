@@ -139,7 +139,7 @@ class Coordinator: NSObject, ObservableObject,
         
         let infoWindow = NMFInfoWindow()
         let dataSource = NMFInfoWindowDefaultTextSource.data()
-        dataSource.title = "서울특별시청"
+        dataSource.title = "포항공과대학교 C5"
         infoWindow.dataSource = dataSource
         infoWindow.open(with: marker)
     }
