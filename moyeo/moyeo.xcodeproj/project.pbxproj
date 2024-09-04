@@ -20,6 +20,8 @@
 		F317D3062C88C3850010FC3B /* Pretendard-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FD2C88C3850010FC3B /* Pretendard-ExtraBold.ttf */; };
 		F317D3072C88C3850010FC3B /* Pretendard-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FE2C88C3850010FC3B /* Pretendard-Bold.ttf */; };
 		F317D3082C88C3850010FC3B /* Pretendard-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FF2C88C3850010FC3B /* Pretendard-Light.ttf */; };
+		F317D30A2C88C47C0010FC3B /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F317D3092C88C47C0010FC3B /* Icons.xcassets */; };
+		F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D30C2C88C77E0010FC3B /* SystemImage.swift */; };
 		F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7052C85EC030035BF02 /* moyeoApp.swift */; };
 		F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7072C85EC030035BF02 /* ContentView.swift */; };
 		F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7092C85EC040035BF02 /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		F317D2FD2C88C3850010FC3B /* Pretendard-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.ttf"; sourceTree = "<group>"; };
 		F317D2FE2C88C3850010FC3B /* Pretendard-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.ttf"; sourceTree = "<group>"; };
 		F317D2FF2C88C3850010FC3B /* Pretendard-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.ttf"; sourceTree = "<group>"; };
+		F317D3092C88C47C0010FC3B /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		F317D30C2C88C77E0010FC3B /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
 		F3DAC7022C85EC030035BF02 /* moyeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moyeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC7052C85EC030035BF02 /* moyeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoApp.swift; sourceTree = "<group>"; };
 		F3DAC7072C85EC030035BF02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,6 +175,14 @@
 			path = Pretendard;
 			sourceTree = "<group>";
 		};
+		F317D30B2C88C7730010FC3B /* SystemImage */ = {
+			isa = PBXGroup;
+			children = (
+				F317D30C2C88C77E0010FC3B /* SystemImage.swift */,
+			);
+			path = SystemImage;
+			sourceTree = "<group>";
+		};
 		F3DAC6F92C85EC020035BF02 = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +248,7 @@
 		F3DAC7592C871AC00035BF02 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F317D30B2C88C7730010FC3B /* SystemImage */,
 				F317D2F52C88C3850010FC3B /* Fonts */,
 				F3DAC75A2C871AE90035BF02 /* Assets */,
 			);
@@ -247,6 +260,7 @@
 			children = (
 				F3DAC7092C85EC040035BF02 /* Assets.xcassets */,
 				F3DAC75D2C8723170035BF02 /* Colors.xcassets */,
+				F317D3092C88C47C0010FC3B /* Icons.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -364,6 +378,7 @@
 				F317D3012C88C3850010FC3B /* Pretendard-Black.ttf in Resources */,
 				F317D2F32C88C18D0010FC3B /* Secrets.xcconfig in Resources */,
 				F317D3062C88C3850010FC3B /* Pretendard-ExtraBold.ttf in Resources */,
+				F317D30A2C88C47C0010FC3B /* Icons.xcassets in Resources */,
 				F317D3022C88C3850010FC3B /* Pretendard-Regular.ttf in Resources */,
 				F3DAC70D2C85EC040035BF02 /* Preview Assets.xcassets in Resources */,
 				F317D3082C88C3850010FC3B /* Pretendard-Light.ttf in Resources */,
@@ -504,6 +519,7 @@
 				F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */,
 				F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */,
 				F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */,
+				F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */,
 				F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
