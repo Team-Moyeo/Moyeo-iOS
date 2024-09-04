@@ -11,6 +11,17 @@
 		6E7B22BB7AE411CBAC88FB8A /* Pods_moyeo_moyeoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7B03907A8C5A74ECC7A971 /* Pods_moyeo_moyeoUITests.framework */; };
 		F317D2F32C88C18D0010FC3B /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F12C88C18D0010FC3B /* Secrets.xcconfig */; };
 		F317D2F42C88C18D0010FC3B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F22C88C18D0010FC3B /* README.md */; };
+		F317D3002C88C3850010FC3B /* Pretendard-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F72C88C3850010FC3B /* Pretendard-Medium.ttf */; };
+		F317D3012C88C3850010FC3B /* Pretendard-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F82C88C3850010FC3B /* Pretendard-Black.ttf */; };
+		F317D3022C88C3850010FC3B /* Pretendard-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F92C88C3850010FC3B /* Pretendard-Regular.ttf */; };
+		F317D3032C88C3850010FC3B /* Pretendard-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FA2C88C3850010FC3B /* Pretendard-Thin.ttf */; };
+		F317D3042C88C3850010FC3B /* Pretendard-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FB2C88C3850010FC3B /* Pretendard-ExtraLight.ttf */; };
+		F317D3052C88C3850010FC3B /* Pretendard-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FC2C88C3850010FC3B /* Pretendard-SemiBold.ttf */; };
+		F317D3062C88C3850010FC3B /* Pretendard-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FD2C88C3850010FC3B /* Pretendard-ExtraBold.ttf */; };
+		F317D3072C88C3850010FC3B /* Pretendard-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FE2C88C3850010FC3B /* Pretendard-Bold.ttf */; };
+		F317D3082C88C3850010FC3B /* Pretendard-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FF2C88C3850010FC3B /* Pretendard-Light.ttf */; };
+		F317D30A2C88C47C0010FC3B /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F317D3092C88C47C0010FC3B /* Icons.xcassets */; };
+		F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D30C2C88C77E0010FC3B /* SystemImage.swift */; };
 		F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7052C85EC030035BF02 /* moyeoApp.swift */; };
 		F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7072C85EC030035BF02 /* ContentView.swift */; };
 		F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7092C85EC040035BF02 /* Assets.xcassets */; };
@@ -52,6 +63,17 @@
 		EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moyeoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F317D2F12C88C18D0010FC3B /* Secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		F317D2F22C88C18D0010FC3B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F317D2F72C88C3850010FC3B /* Pretendard-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.ttf"; sourceTree = "<group>"; };
+		F317D2F82C88C3850010FC3B /* Pretendard-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.ttf"; sourceTree = "<group>"; };
+		F317D2F92C88C3850010FC3B /* Pretendard-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.ttf"; sourceTree = "<group>"; };
+		F317D2FA2C88C3850010FC3B /* Pretendard-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.ttf"; sourceTree = "<group>"; };
+		F317D2FB2C88C3850010FC3B /* Pretendard-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F317D2FC2C88C3850010FC3B /* Pretendard-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.ttf"; sourceTree = "<group>"; };
+		F317D2FD2C88C3850010FC3B /* Pretendard-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F317D2FE2C88C3850010FC3B /* Pretendard-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.ttf"; sourceTree = "<group>"; };
+		F317D2FF2C88C3850010FC3B /* Pretendard-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.ttf"; sourceTree = "<group>"; };
+		F317D3092C88C47C0010FC3B /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		F317D30C2C88C77E0010FC3B /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
 		F3DAC7022C85EC030035BF02 /* moyeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moyeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC7052C85EC030035BF02 /* moyeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoApp.swift; sourceTree = "<group>"; };
 		F3DAC7072C85EC030035BF02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +151,38 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		F317D2F52C88C3850010FC3B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F317D2F62C88C3850010FC3B /* Pretendard */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F317D2F62C88C3850010FC3B /* Pretendard */ = {
+			isa = PBXGroup;
+			children = (
+				F317D2F72C88C3850010FC3B /* Pretendard-Medium.ttf */,
+				F317D2F82C88C3850010FC3B /* Pretendard-Black.ttf */,
+				F317D2F92C88C3850010FC3B /* Pretendard-Regular.ttf */,
+				F317D2FA2C88C3850010FC3B /* Pretendard-Thin.ttf */,
+				F317D2FB2C88C3850010FC3B /* Pretendard-ExtraLight.ttf */,
+				F317D2FC2C88C3850010FC3B /* Pretendard-SemiBold.ttf */,
+				F317D2FD2C88C3850010FC3B /* Pretendard-ExtraBold.ttf */,
+				F317D2FE2C88C3850010FC3B /* Pretendard-Bold.ttf */,
+				F317D2FF2C88C3850010FC3B /* Pretendard-Light.ttf */,
+			);
+			path = Pretendard;
+			sourceTree = "<group>";
+		};
+		F317D30B2C88C7730010FC3B /* SystemImage */ = {
+			isa = PBXGroup;
+			children = (
+				F317D30C2C88C77E0010FC3B /* SystemImage.swift */,
+			);
+			path = SystemImage;
+			sourceTree = "<group>";
+		};
 		F3DAC6F92C85EC020035BF02 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +248,8 @@
 		F3DAC7592C871AC00035BF02 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F317D30B2C88C7730010FC3B /* SystemImage */,
+				F317D2F52C88C3850010FC3B /* Fonts */,
 				F3DAC75A2C871AE90035BF02 /* Assets */,
 			);
 			path = Resource;
@@ -204,6 +260,7 @@
 			children = (
 				F3DAC7092C85EC040035BF02 /* Assets.xcassets */,
 				F3DAC75D2C8723170035BF02 /* Colors.xcassets */,
+				F317D3092C88C47C0010FC3B /* Icons.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -317,9 +374,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F317D3032C88C3850010FC3B /* Pretendard-Thin.ttf in Resources */,
+				F317D3012C88C3850010FC3B /* Pretendard-Black.ttf in Resources */,
 				F317D2F32C88C18D0010FC3B /* Secrets.xcconfig in Resources */,
+				F317D3062C88C3850010FC3B /* Pretendard-ExtraBold.ttf in Resources */,
+				F317D30A2C88C47C0010FC3B /* Icons.xcassets in Resources */,
+				F317D3022C88C3850010FC3B /* Pretendard-Regular.ttf in Resources */,
 				F3DAC70D2C85EC040035BF02 /* Preview Assets.xcassets in Resources */,
+				F317D3082C88C3850010FC3B /* Pretendard-Light.ttf in Resources */,
+				F317D3052C88C3850010FC3B /* Pretendard-SemiBold.ttf in Resources */,
+				F317D3072C88C3850010FC3B /* Pretendard-Bold.ttf in Resources */,
+				F317D3002C88C3850010FC3B /* Pretendard-Medium.ttf in Resources */,
 				F317D2F42C88C18D0010FC3B /* README.md in Resources */,
+				F317D3042C88C3850010FC3B /* Pretendard-ExtraLight.ttf in Resources */,
 				F3DAC75E2C8723170035BF02 /* Colors.xcassets in Resources */,
 				F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */,
 			);
@@ -452,6 +519,7 @@
 				F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */,
 				F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */,
 				F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */,
+				F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */,
 				F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
