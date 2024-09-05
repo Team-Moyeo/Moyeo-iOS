@@ -18,8 +18,7 @@ struct LoginView: View {
                 Spacer()
                 AppleSignUpButton()
                     .padding(.bottom, 40)
-            }
-            
+            }    
         }
     }
 }
@@ -27,14 +26,14 @@ struct LoginView: View {
 // MARK: - 메인 로고
 private struct MainLogo: View {
     var body: some View {
-            Image(.imgMoyeo)
-                .resizable()
-                .scaledToFit()
-            Spacer()
-                .frame(height: 10)
-            Image(.imgSlogan)
-                .resizable()
-                .scaledToFit()
+        Image(.imgMoyeo)
+            .resizable()
+            .scaledToFit()
+        Spacer()
+            .frame(height: 10)
+        Image(.imgSloganEng)
+            .resizable()
+            .scaledToFit()
     }
 }
 
