@@ -183,6 +183,54 @@ private struct CreateMeetingButton: View {
     }
 }
 
+// MARK: - 모임 리스트 미확정 셀
+private struct MeetingListPendingCell: View {
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text("오택동 첫 회식")
+                    .font(.Head.head5)
+                Text("24.05.12 마감예정")
+                    .font(.Body.body5)
+                    .foregroundStyle(Color.gray5)
+            }
+            Spacer()
+        }
+    }
+}
+
+// MARK: - 모임 리스트 확정 셀
+private struct MeetingListConfirmCell: View {
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text("와인 동아리")
+                    .font(.Head.head5)
+                Text("D-5")
+                    .font(.Body.body5)
+                    .foregroundStyle(Color.gray5)
+            }
+            Spacer()
+            VStack(alignment: .trailing) {
+                Text("24. 05. 12 19:00")
+                    .font(.Body.body5)
+                    .foregroundStyle(Color.moyeoMain)
+                Text("대동집 포항효자점")
+                    .font(.Body.body5)
+                    .foregroundStyle(Color.moyeoMain)
+            }
+        }
+    }
+}
+
 #Preview {
     MainView()
+}
+
+#Preview {
+    MeetingListPendingCell()
+}
+
+#Preview {
+    MeetingListConfirmCell()
 }
