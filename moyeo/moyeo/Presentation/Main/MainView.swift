@@ -184,7 +184,7 @@ private struct CreateMeetingButton: View {
 }
 
 // MARK: - 모임 리스트 미확정 셀
-private struct MeetingListPendingCell: View {
+private struct MeetingPendingListCell: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -200,7 +200,7 @@ private struct MeetingListPendingCell: View {
 }
 
 // MARK: - 모임 리스트 확정 셀
-private struct MeetingListConfirmCell: View {
+private struct MeetingConfirmListCell: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -228,9 +228,9 @@ private struct MeetingListConfirmCell: View {
 }
 
 #Preview {
-    MeetingListPendingCell()
+    MeetingPendingListCell()
 }
 
 #Preview {
-    MeetingListConfirmCell()
+    MeetingConfirmListCell()
 }
