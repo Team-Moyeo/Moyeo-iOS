@@ -22,7 +22,7 @@
 		F317D3082C88C3850010FC3B /* Pretendard-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2FF2C88C3850010FC3B /* Pretendard-Light.ttf */; };
 		F317D30A2C88C47C0010FC3B /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F317D3092C88C47C0010FC3B /* Icons.xcassets */; };
 		F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D30C2C88C77E0010FC3B /* SystemImage.swift */; };
-		F317D3122C88CA6F0010FC3B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3112C88CA6F0010FC3B /* MainView.swift */; };
+		F317D3122C88CA6F0010FC3B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3112C88CA6F0010FC3B /* LoginView.swift */; };
 		F317D3172C88CAA90010FC3B /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3162C88CAA90010FC3B /* Path.swift */; };
 		F317D31A2C88CAE60010FC3B /* TempEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3192C88CAE60010FC3B /* TempEntity.swift */; };
 		F317D31D2C88CB0B0010FC3B /* TempUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D31C2C88CB0B0010FC3B /* TempUseCase.swift */; };
@@ -38,6 +38,7 @@
 		F317D33B2C88CD0D0010FC3B /* StubTempService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D33A2C88CD0D0010FC3B /* StubTempService.swift */; };
 		F317D33E2C88CD450010FC3B /* TempDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D33D2C88CD450010FC3B /* TempDTO.swift */; };
 		F317D3452C88CDC70010FC3B /* Helper+PretendardFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3442C88CDC70010FC3B /* Helper+PretendardFont.swift */; };
+		F359F4952C89835E00C91981 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F359F4942C89835E00C91981 /* MainView.swift */; };
 		F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7052C85EC030035BF02 /* moyeoApp.swift */; };
 		F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7072C85EC030035BF02 /* ContentView.swift */; };
 		F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7092C85EC040035BF02 /* Assets.xcassets */; };
@@ -90,7 +91,7 @@
 		F317D2FF2C88C3850010FC3B /* Pretendard-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.ttf"; sourceTree = "<group>"; };
 		F317D3092C88C47C0010FC3B /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		F317D30C2C88C77E0010FC3B /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
-		F317D3112C88CA6F0010FC3B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F317D3112C88CA6F0010FC3B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F317D3162C88CAA90010FC3B /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		F317D3192C88CAE60010FC3B /* TempEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempEntity.swift; sourceTree = "<group>"; };
 		F317D31C2C88CB0B0010FC3B /* TempUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempUseCase.swift; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 		F317D33A2C88CD0D0010FC3B /* StubTempService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubTempService.swift; sourceTree = "<group>"; };
 		F317D33D2C88CD450010FC3B /* TempDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDTO.swift; sourceTree = "<group>"; };
 		F317D3442C88CDC70010FC3B /* Helper+PretendardFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+PretendardFont.swift"; sourceTree = "<group>"; };
+		F359F4942C89835E00C91981 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F3DAC7022C85EC030035BF02 /* moyeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moyeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC7052C85EC030035BF02 /* moyeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoApp.swift; sourceTree = "<group>"; };
 		F3DAC7072C85EC030035BF02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -226,17 +228,18 @@
 		F317D30F2C88CA500010FC3B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				F317D3102C88CA5F0010FC3B /* Main */,
+				F359F4932C89835400C91981 /* Main */,
+				F317D3102C88CA5F0010FC3B /* Login */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		F317D3102C88CA5F0010FC3B /* Main */ = {
+		F317D3102C88CA5F0010FC3B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				F317D3112C88CA6F0010FC3B /* MainView.swift */,
+				F317D3112C88CA6F0010FC3B /* LoginView.swift */,
 			);
-			path = Main;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		F317D3142C88CA940010FC3B /* Domain */ = {
@@ -360,6 +363,14 @@
 				F317D3442C88CDC70010FC3B /* Helper+PretendardFont.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		F359F4932C89835400C91981 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F359F4942C89835E00C91981 /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		F3DAC6F92C85EC020035BF02 = {
@@ -705,8 +716,9 @@
 				F317D3262C88CB8F0010FC3B /* NetworkManager.swift in Sources */,
 				F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */,
 				F317D3172C88CAA90010FC3B /* Path.swift in Sources */,
-				F317D3122C88CA6F0010FC3B /* MainView.swift in Sources */,
+				F317D3122C88CA6F0010FC3B /* LoginView.swift in Sources */,
 				F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */,
+				F359F4952C89835E00C91981 /* MainView.swift in Sources */,
 				F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */,
 				F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */,
 				F317D3392C88CCED0010FC3B /* MockDataBuilder.swift in Sources */,
