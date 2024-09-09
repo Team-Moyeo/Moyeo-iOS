@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MainView: View {
+    @State private var inviteCode: String = ""
     var body: some View {
         VStack(spacing: 0) {
-            Header()
+            Header(inviteCode: $inviteCode)
             Spacer()
                 .frame(height: 20)
             ConfirmPicker()
@@ -29,6 +30,7 @@ struct MainView: View {
 
 // MARK: - 헤더
 private struct Header: View {
+    @Binding private(set) var inviteCode: String
     var body: some View {
         HStack(spacing: 0) {
             Image(.imgMoyeoWhite)
@@ -36,7 +38,7 @@ private struct Header: View {
                 .scaledToFit()
             Spacer()
                 .frame(width: 28)
-            InviteCodeButton()
+            InviteCodeButton(inviteCode: $inviteCode)
                 .frame(width: 100)
             Spacer()
                 .frame(width: 8)
@@ -53,18 +55,47 @@ private struct Header: View {
 
 // MARK: - 초대코드 입력 버튼
 private struct InviteCodeButton: View {
+    @State private var isAlertPresented: Bool = false
+    @Binding private(set) var inviteCode: String
+    
     var body: some View {
         Button {
             // TODO: 초대코드 입력 Alert 띄우기 구현
-            
+            isAlertPresented.toggle()
         } label: {
             RoundedRectangle(cornerRadius: 8)
-                .foregroundStyle(.moyeoLightPink)
+                .foregroundStyle(Color.moyeoMain)
                 .overlay {
                     HStack {
                         Text("초대코드 입력")
+                            .foregroundStyle(Color.white)
                     }
                 }
+        }
+        .alert("초대코드 입력", isPresented: $isAlertPresented) {
+            TextField("영문/숫자 30자리", text: $inviteCode)
+            // TODO: iOS 17.0에 맞춰 deprecated 된 부분 수정하기
+                .onChange(of: inviteCode) { inviteCodeString in
+                    // 30자를 초과할 경우 자름
+                    if inviteCodeString.count > 30 {
+                        inviteCode = String(inviteCodeString.prefix(30))
+                    }
+                }
+            Button {
+                // TODO: 확인 버튼을 눌렀을 때의 동작
+                print("입력한 초대코드: \(inviteCode)")
+            } label: {
+                Text("확인")
+            }
+            Button(role: .cancel) {
+                // TODO: 취소 버튼을 눌렀을 때의 동작
+                
+            } label: {
+                Text("취소")
+                    .foregroundStyle(Color.red)
+            }
+        } message: {
+            Text("공유받은 초대코드를 입력해주세요.")
         }
     }
 }
@@ -77,10 +108,11 @@ private struct SelectButton: View {
             
         } label: {
             RoundedRectangle(cornerRadius: 8)
-                .foregroundStyle(.gray1)
+                .foregroundStyle(.moyeoLightPink)
                 .overlay {
                     HStack {
                         Text("선택")
+                            .foregroundStyle(.moyeoMain)
                     }
                 }
         }
@@ -146,6 +178,7 @@ private struct CreateMeetingButton: View {
                             .foregroundStyle(.white)
                     }
                 }
+                .foregroundStyle(Color.moyeoMain)
         }
     }
 }
