@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct moyeoApp: App {
+    
+    @State private var tempIsLoginComplete: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // TODO: true자리에 authUseCase.state.isLoginComplete로 자동 로그인 되게끔
+            if !tempIsLoginComplete {
+                LoginView(tempIsLoginComplete: $tempIsLoginComplete)
+            } else {
+                MainView()
+            }
         }
     }
 }
