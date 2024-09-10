@@ -14,7 +14,7 @@ struct MainView: View {
             Header(inviteCode: $inviteCode)
             Spacer()
                 .frame(height: 20)
-            ConfirmPicker()
+            ConfirmPicker(selectedTab: .pending)
             Spacer()
             // TODO: 리스트가 비어있다면 해당 뷰가 뜨도록 구현
             if true {
@@ -133,19 +133,24 @@ private struct ProfileButton: View {
     }
 }
 
-// MARK: - 미확정/확정 Picker
+// MARK: - 진행중/확정 Picker
 private struct ConfirmPicker: View {
     // TODO: 임시 변수 추후 수정 예정
-    @State var selectedTab = "미확정"
-    var isSelected = ["미확정", "확정"]
+    @State var selectedTab: ConfirmState = .pending
+    
+    enum ConfirmState: String, CaseIterable {
+        case pending = "진행중"
+        case confirm = "확정"
+    }
     
     var body: some View {
-        Picker("", selection: $selectedTab) {
-            ForEach(isSelected, id: \.self) {
-                Text($0)
+        Picker("상태 선택", selection: $selectedTab) {
+            ForEach(ConfirmState.allCases, id: \.self) { state in
+                Text(state.rawValue)
+                    .tag(state)
             }
         }
-        .pickerStyle(.segmented)
+        .pickerStyle(SegmentedPickerStyle())
     }
 }
 
@@ -183,19 +188,45 @@ private struct CreateMeetingButton: View {
     }
 }
 
+// MARK: - 모임 리스트 미확정 리스트
+private struct MeetingPendingList: View {
+    // 임시 데이터
+    struct PendingListCellInfo: Hashable {
+        var title: String
+        var deadline: String
+    }
+    
+    var tempPendingList: [PendingListCellInfo] = [PendingListCellInfo(title: "오택동 첫 회식", deadline: "24.05.12"), PendingListCellInfo(title: "오택동 첫 회식", deadline: "24.05.12"), PendingListCellInfo(title: "오택동 첫 회식", deadline: "24.05.12"), PendingListCellInfo(title: "오택동 첫 회식", deadline: "24.05.12")]
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            ForEach(tempPendingList, id: \.self) { cellInfo in
+                Divider()
+                MeetingPendingListCell(title: cellInfo.title, deadline: cellInfo.deadline)
+                Divider()
+            }
+        }
+    }
+    
+}
+
 // MARK: - 모임 리스트 미확정 셀
 private struct MeetingPendingListCell: View {
+    var title: String
+    var deadline: String
+    
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             VStack(alignment: .leading) {
-                Text("오택동 첫 회식")
+                Text(title)
                     .font(.Head.head5)
-                Text("24.05.12 마감예정")
+                Text("\(deadline) 마감예정")
                     .font(.Body.body5)
                     .foregroundStyle(Color.gray5)
             }
             Spacer()
         }
+        .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
     }
 }
 
@@ -228,7 +259,11 @@ private struct MeetingConfirmListCell: View {
 }
 
 #Preview {
-    MeetingPendingListCell()
+    MeetingPendingList()
+}
+
+#Preview {
+    MeetingPendingListCell(title: "오택동 첫 회식", deadline: "24.05.12")
 }
 
 #Preview {
