@@ -21,7 +21,7 @@ struct MainView: View {
                 .frame(height: 20)
             ConfirmPicker(selectedTab: $selectedTab)
             Spacer()
-            MeetingList(pendingMeetings: pendingMeetings, confirmMeetings: confirmMeetings, selectedTab: $selectedTab)
+            MeetingList(selectedTab: $selectedTab)
             Spacer()
             CreateMeetingButton()
                 .frame(width: 360, height: 52)
@@ -193,23 +193,21 @@ private struct CreateMeetingButton: View {
 
 // MARK: - 모임 리스트
 private struct MeetingList: View {
-    let pendingMeetings: [Meeting]
-    let confirmMeetings: [Meeting]
+    @State private var pendingMeetings: [Meeting] = MockDataBuilder.pendingMeetings
+    @State private var confirmMeetings: [Meeting] = MockDataBuilder.confirmMeetings
     @Binding var selectedTab: ConfirmState
     var body: some View {
-        ScrollView {
-            if selectedTab == ConfirmState.pending {
-                if pendingMeetings.isEmpty {
-                    EmptyListView()
-                } else {
-                    MeetingPendingList(pendingMeetings: pendingMeetings)
-                }
-            } else if selectedTab == ConfirmState.confirm {
-                if confirmMeetings.isEmpty {
-                    EmptyListView()
-                } else {
-                    MeetingConfirmList(confirmMeetings: confirmMeetings)
-                }
+        if selectedTab == ConfirmState.pending {
+            if pendingMeetings.isEmpty {
+                EmptyListView()
+            } else {
+                MeetingPendingList(pendingMeetings: $pendingMeetings)
+            }
+        } else if selectedTab == ConfirmState.confirm {
+            if confirmMeetings.isEmpty {
+                EmptyListView()
+            } else {
+                MeetingConfirmList(confirmMeetings: $confirmMeetings)
             }
         }
     }
@@ -218,34 +216,44 @@ private struct MeetingList: View {
 // MARK: - 모임 리스트 미확정 리스트
 private struct MeetingPendingList: View {
     
-    let pendingMeetings: [Meeting]
+    @Binding var pendingMeetings: [Meeting]
     
     var body: some View {
-        VStack(spacing: 0) {
+        List {
             // TODO: 목업 데이터 실제 데이터로 변경
             ForEach(pendingMeetings) { cellInfo in
-                Divider()
                 MeetingPendingListCell(title: cellInfo.title, deadline: cellInfo.deadline)
-                Divider()
             }
+            .onDelete(perform: deleteItems)
         }
+        .listStyle(PlainListStyle())
+    }
+    
+    // TODO: 추후 UseCase로 이동
+    func deleteItems(at offsets: IndexSet) {
+        pendingMeetings.remove(atOffsets: offsets)
     }
 }
 
 // MARK: - 모임 리스트 확정 리스트
 private struct MeetingConfirmList: View {
     
-    let confirmMeetings: [Meeting]
+    @Binding var confirmMeetings: [Meeting]
     
     var body: some View {
-        VStack(spacing: 0) {
+        List {
             // TODO: 목업 데이터 실제 데이터로 변경
             ForEach(confirmMeetings) { cellInfo in
-                Divider()
                 MeetingConfirmListCell(title: cellInfo.title, deadline: cellInfo.deadline, fixedTimes: [])
-                Divider()
             }
+            .onDelete(perform: deleteItems)
         }
+        .listStyle(PlainListStyle())
+    }
+    
+    // TODO: 추후 UseCase로 이동
+    func deleteItems(at offsets: IndexSet) {
+        confirmMeetings.remove(atOffsets: offsets)
     }
 }
 
@@ -306,7 +314,7 @@ private struct MeetingConfirmListCell: View {
 }
 
 #Preview {
-    MeetingPendingList(pendingMeetings: MockDataBuilder.pendingMeetings)
+    MeetingPendingList(pendingMeetings: .constant(MockDataBuilder.pendingMeetings))
 }
 
 #Preview {
