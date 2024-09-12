@@ -9,46 +9,44 @@ import Foundation
 
 struct Meeting: Identifiable {
     var id: Int
+    var ownerId: Int
     var title: String
-    // TODO: Place Entity 개발 이후 연결
-//    var meetingStatus: MeetingStatus
+    var meetingStatus: MeetingStatus
     var startDate: Date
     var endDate: Date
     var startTime: Date
     var endTime: Date
     var fixedTimes: [Date]
-    // TODO: Place Entity 개발 이후 연결
-//    var fixedPlace: [Place]
+    var fixedPlaceId: Int
     var deadline: Date
     var numberOfPeople: Int
     var inviteCode: String
     
     init(
         id: Int,
+        ownerId: Int,
         title: String,
-        // TODO: Place Entity 개발 이후 연결
-//        meetingStatus: String,
+        meetingStatus: MeetingStatus,
         startDate: Date,
         endDate: Date,
         startTime: Date,
         endTime: Date,
-        // TODO: Place Entity 개발 이후 연결
         fixedTimes: [Date],
+        fixedPlaceId: Int,
         deadline: Date,
         numberOfPeople: Int,
         inviteCode: String
     ) {
         self.id = id
+        self.ownerId = ownerId
         self.title = title
-        // TODO: Place Entity 개발 이후 연결
-//        self.meetingStatus = meetingStatus
+        self.meetingStatus = meetingStatus
         self.startDate = startDate
         self.endDate = endDate
         self.startTime = startTime
         self.endTime = endTime
         self.fixedTimes = fixedTimes
-        // TODO: Place Entity 개발 이후 연결
-//        self.fixedPlace = fixedPlace
+        self.fixedPlaceId = fixedPlaceId
         self.deadline = deadline
         self.numberOfPeople = numberOfPeople
         self.inviteCode = inviteCode
