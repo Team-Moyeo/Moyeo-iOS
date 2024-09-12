@@ -14,7 +14,9 @@ struct MockDataBuilder {
         return [
             Meeting(
                 id: 1,
+                ownerId: 1,
                 title: "오택동 첫 회식",
+                meetingStatus: .PENDING,
                 startDate: "2024-08-12".toDate ?? Date(),
                 endDate: "2024-08-14".toDate ?? Date(),
                 startTime: "09:00".toTime ?? Date(),
@@ -32,7 +34,9 @@ struct MockDataBuilder {
             ),
             Meeting(
                 id: 2,
+                ownerId: 1,
                 title: "오택동 첫 회식",
+                meetingStatus: .PENDING,
                 startDate: "2024-08-12".toDate ?? Date(),
                 endDate: "2024-08-14".toDate ?? Date(),
                 startTime: "09:00".toTime ?? Date(),
@@ -50,7 +54,9 @@ struct MockDataBuilder {
             ),
             Meeting(
                 id: 3,
+                ownerId: 1,
                 title: "오택동 첫 회식",
+                meetingStatus: .PENDING,
                 startDate: "2024-08-12".toDate ?? Date(),
                 endDate: "2024-08-14".toDate ?? Date(),
                 startTime: "09:00".toTime ?? Date(),
@@ -74,7 +80,9 @@ struct MockDataBuilder {
         return [
             Meeting(
                 id: 1,
-                title: "와인 모임",
+                ownerId: 1,
+                title: "와인 동아리",
+                meetingStatus: .CONFIRM,
                 startDate: "2024-08-12".toDate ?? Date(),
                 endDate: "2024-08-14".toDate ?? Date(),
                 startTime: "09:00".toTime ?? Date(),
@@ -92,7 +100,9 @@ struct MockDataBuilder {
             ),
             Meeting(
                 id: 2,
-                title: "와인 모임",
+                ownerId: 1,
+                title: "와인 동아리",
+                meetingStatus: .CONFIRM,
                 startDate: "2024-08-12".toDate ?? Date(),
                 endDate: "2024-08-14".toDate ?? Date(),
                 startTime: "09:00".toTime ?? Date(),
@@ -110,7 +120,9 @@ struct MockDataBuilder {
             ),
             Meeting(
                 id: 3,
-                title: "와인 모임",
+                ownerId: 1,
+                title: "와인 동아리",
+                meetingStatus: .CONFIRM,
                 startDate: "2024-08-12".toDate ?? Date(),
                 endDate: "2024-08-14".toDate ?? Date(),
                 startTime: "09:00".toTime ?? Date(),
@@ -128,7 +140,9 @@ struct MockDataBuilder {
             ),
             Meeting(
                 id: 4,
-                title: "와인 모임",
+                ownerId: 1,
+                title: "와인 동아리",
+                meetingStatus: .CONFIRM,
                 startDate: "2024-08-12".toDate ?? Date(),
                 endDate: "2024-08-14".toDate ?? Date(),
                 startTime: "09:00".toTime ?? Date(),
