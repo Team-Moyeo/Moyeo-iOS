@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6E03E68DE0E8628FDB17447F /* Pods_moyeo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FC1A7555860E9B50429C23 /* Pods_moyeo.framework */; };
 		6E7B22BB7AE411CBAC88FB8A /* Pods_moyeo_moyeoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7B03907A8C5A74ECC7A971 /* Pods_moyeo_moyeoUITests.framework */; };
+		F30DA9F72C911E7B001FB617 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30DA9F62C911E7B001FB617 /* Meeting.swift */; };
+		F30DA9F92C912D0C001FB617 /* Helper+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30DA9F82C912D0C001FB617 /* Helper+DateFormatter.swift */; };
 		F317D2F32C88C18D0010FC3B /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F12C88C18D0010FC3B /* Secrets.xcconfig */; };
 		F317D2F42C88C18D0010FC3B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F22C88C18D0010FC3B /* README.md */; };
 		F317D3002C88C3850010FC3B /* Pretendard-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F72C88C3850010FC3B /* Pretendard-Medium.ttf */; };
@@ -49,6 +51,7 @@
 		F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7532C8711D80035BF02 /* NaverMap.swift */; };
 		F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7552C8711EB0035BF02 /* Coordinator.swift */; };
 		F3DAC75E2C8723170035BF02 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC75D2C8723170035BF02 /* Colors.xcassets */; };
+		F3EFF2252C929B5100A2D6B4 /* Helper+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */; };
 		FC65FB68E9CE20AF016071AE /* Pods_moyeoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,8 @@
 		C3F056F3A2B3BA0F48217264 /* Pods-moyeoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeoTests.release.xcconfig"; path = "Target Support Files/Pods-moyeoTests/Pods-moyeoTests.release.xcconfig"; sourceTree = "<group>"; };
 		D39513F7C23DEDECCA09ED22 /* Pods-moyeoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeoTests.debug.xcconfig"; path = "Target Support Files/Pods-moyeoTests/Pods-moyeoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moyeoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30DA9F62C911E7B001FB617 /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		F30DA9F82C912D0C001FB617 /* Helper+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+DateFormatter.swift"; sourceTree = "<group>"; };
 		F317D2F12C88C18D0010FC3B /* Secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		F317D2F22C88C18D0010FC3B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F317D2F72C88C3850010FC3B /* Pretendard-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.ttf"; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 		F3DAC7532C8711D80035BF02 /* NaverMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMap.swift; sourceTree = "<group>"; };
 		F3DAC7552C8711EB0035BF02 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F3DAC75D2C8723170035BF02 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+String.swift"; sourceTree = "<group>"; };
 		F812A393E327E92ACBDCD526 /* Pods-moyeo-moyeoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo-moyeoUITests.debug.xcconfig"; path = "Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +180,13 @@
 				C3F056F3A2B3BA0F48217264 /* Pods-moyeoTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F30DA9F32C905830001FB617 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 		F317D2F02C88C18D0010FC3B /* Config */ = {
@@ -266,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				F317D3192C88CAE60010FC3B /* TempEntity.swift */,
+				F30DA9F62C911E7B001FB617 /* Meeting.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -289,6 +303,7 @@
 		F317D3212C88CB570010FC3B /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				F30DA9F32C905830001FB617 /* Stub */,
 				F317D3222C88CB5F0010FC3B /* Constant.swift */,
 			);
 			path = Constant;
@@ -361,6 +376,8 @@
 			isa = PBXGroup;
 			children = (
 				F317D3442C88CDC70010FC3B /* Helper+PretendardFont.swift */,
+				F30DA9F82C912D0C001FB617 /* Helper+DateFormatter.swift */,
+				F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -721,11 +738,13 @@
 				F359F4952C89835E00C91981 /* MainView.swift in Sources */,
 				F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */,
 				F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */,
+				F30DA9F92C912D0C001FB617 /* Helper+DateFormatter.swift in Sources */,
 				F317D3392C88CCED0010FC3B /* MockDataBuilder.swift in Sources */,
 				F317D3292C88CBF80010FC3B /* TempService.swift in Sources */,
 				F317D3452C88CDC70010FC3B /* Helper+PretendardFont.swift in Sources */,
 				F317D3332C88CC910010FC3B /* TempResponse.swift in Sources */,
 				F317D31D2C88CB0B0010FC3B /* TempUseCase.swift in Sources */,
+				F30DA9F72C911E7B001FB617 /* Meeting.swift in Sources */,
 				F317D32E2C88CC3C0010FC3B /* NetworkError.swift in Sources */,
 				F317D31A2C88CAE60010FC3B /* TempEntity.swift in Sources */,
 				F317D3312C88CC730010FC3B /* TempRequest.swift in Sources */,
@@ -733,6 +752,7 @@
 				F317D32C2C88CC1E0010FC3B /* BaseResponse.swift in Sources */,
 				F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */,
 				F317D3202C88CB440010FC3B /* TempServiceInterface.swift in Sources */,
+				F3EFF2252C929B5100A2D6B4 /* Helper+String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

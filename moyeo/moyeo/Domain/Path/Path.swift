@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum RegisterPath: Hashable {
+    
+}
+
 @Observable
 final class PathModel {
     

@@ -9,6 +9,8 @@ import SwiftUI
 import AuthenticationServices
 
 struct LoginView: View {
+    @Binding private(set) var tempIsLoginComplete: Bool
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -16,7 +18,7 @@ struct LoginView: View {
                 MainLogo()
                     .padding(EdgeInsets(top: 0, leading: 80, bottom: 0, trailing: 80))
                 Spacer()
-                AppleSignUpButton()
+                AppleSignUpButton(tempIsLoginComplete: $tempIsLoginComplete)
                     .padding(.bottom, 40)
             }    
         }
@@ -39,6 +41,7 @@ private struct MainLogo: View {
 
 // MARK: - 애플 로그인
 private struct AppleSignUpButton: View {
+    @Binding private(set) var tempIsLoginComplete: Bool
     
     var body: some View {
         SignInWithAppleButton(
@@ -47,10 +50,12 @@ private struct AppleSignUpButton: View {
             },
             onCompletion: { result in
                 // TODO: 임시 코드 추후 수정 예정 -> UseCase의 함수로 대체
-                let loginResult: Result<Bool, Error> = .success(true)
+                var loginResult: Result<Bool, Error> = .success(tempIsLoginComplete)
+                
                 switch loginResult {
                 case .success:
                     print("로그인 성공")
+                    tempIsLoginComplete.toggle()
                     
                 case .failure(let error):
                     print("로그인 실패 \(error.localizedDescription)")
@@ -65,5 +70,5 @@ private struct AppleSignUpButton: View {
 }
 
 #Preview {
-    LoginView()
+    LoginView(tempIsLoginComplete: .constant(false))
 }
