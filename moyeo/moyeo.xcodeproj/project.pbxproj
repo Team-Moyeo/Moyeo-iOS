@@ -54,6 +54,7 @@
 		F3EFF2272C930FAD00A2D6B4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2262C930FAD00A2D6B4 /* Member.swift */; };
 		F3EFF2292C9312E800A2D6B4 /* SocialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2282C9312E800A2D6B4 /* SocialType.swift */; };
 		F3EFF22B2C9313C500A2D6B4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF22A2C9313C500A2D6B4 /* Place.swift */; };
+		F3EFF22D2C9314A300A2D6B4 /* CandidatePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF22C2C9314A300A2D6B4 /* CandidatePlace.swift */; };
 		FC65FB68E9CE20AF016071AE /* Pods_moyeoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		F3EFF2262C930FAD00A2D6B4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F3EFF2282C9312E800A2D6B4 /* SocialType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialType.swift; sourceTree = "<group>"; };
 		F3EFF22A2C9313C500A2D6B4 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		F3EFF22C2C9314A300A2D6B4 /* CandidatePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatePlace.swift; sourceTree = "<group>"; };
 		F812A393E327E92ACBDCD526 /* Pods-moyeo-moyeoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo-moyeoUITests.debug.xcconfig"; path = "Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,6 +288,7 @@
 				F3EFF2262C930FAD00A2D6B4 /* Member.swift */,
 				F3EFF22A2C9313C500A2D6B4 /* Place.swift */,
 				F3EFF2282C9312E800A2D6B4 /* SocialType.swift */,
+				F3EFF22C2C9314A300A2D6B4 /* CandidatePlace.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				F317D32E2C88CC3C0010FC3B /* NetworkError.swift in Sources */,
 				F317D3312C88CC730010FC3B /* TempRequest.swift in Sources */,
 				F317D3232C88CB5F0010FC3B /* Constant.swift in Sources */,
+				F3EFF22D2C9314A300A2D6B4 /* CandidatePlace.swift in Sources */,
 				F317D32C2C88CC1E0010FC3B /* BaseResponse.swift in Sources */,
 				F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */,
 				F317D3202C88CB440010FC3B /* TempServiceInterface.swift in Sources */,
