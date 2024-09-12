@@ -9,9 +9,9 @@ import Foundation
 
 struct Meeting: Identifiable {
     var id: Int
+    var ownerId: Int
     var title: String
-    // TODO: MeetingStatus Entity 개발 이후 연결
-//    var meetingStatus: MeetingStatus
+    var meetingStatus: MeetingStatus
     var startDate: Date
     var endDate: Date
     var startTime: Date
@@ -24,9 +24,9 @@ struct Meeting: Identifiable {
     
     init(
         id: Int,
+        ownerId: Int,
         title: String,
-        // TODO: MeetingStatus Entity 개발 이후 연결
-//        meetingStatus: String,
+        meetingStatus: MeetingStatus,
         startDate: Date,
         endDate: Date,
         startTime: Date,
@@ -38,9 +38,9 @@ struct Meeting: Identifiable {
         inviteCode: String
     ) {
         self.id = id
+        self.ownerId = ownerId
         self.title = title
-        // TODO: MeetingStatus Entity 개발 이후 연결
-//        self.meetingStatus = meetingStatus
+        self.meetingStatus = meetingStatus
         self.startDate = startDate
         self.endDate = endDate
         self.startTime = startTime

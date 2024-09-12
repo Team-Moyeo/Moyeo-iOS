@@ -40,6 +40,7 @@
 		F317D33E2C88CD450010FC3B /* TempDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D33D2C88CD450010FC3B /* TempDTO.swift */; };
 		F317D3452C88CDC70010FC3B /* Helper+PretendardFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3442C88CDC70010FC3B /* Helper+PretendardFont.swift */; };
 		F359F4952C89835E00C91981 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F359F4942C89835E00C91981 /* MainView.swift */; };
+		F38ED1DB2C934C1F003AD5BC /* MeetingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */; };
 		F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7052C85EC030035BF02 /* moyeoApp.swift */; };
 		F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7072C85EC030035BF02 /* ContentView.swift */; };
 		F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7092C85EC040035BF02 /* Assets.xcassets */; };
@@ -115,6 +116,7 @@
 		F317D33D2C88CD450010FC3B /* TempDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDTO.swift; sourceTree = "<group>"; };
 		F317D3442C88CDC70010FC3B /* Helper+PretendardFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+PretendardFont.swift"; sourceTree = "<group>"; };
 		F359F4942C89835E00C91981 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingStatus.swift; sourceTree = "<group>"; };
 		F3DAC7022C85EC030035BF02 /* moyeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moyeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC7052C85EC030035BF02 /* moyeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoApp.swift; sourceTree = "<group>"; };
 		F3DAC7072C85EC030035BF02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				F3EFF2262C930FAD00A2D6B4 /* Member.swift */,
 				F3EFF22A2C9313C500A2D6B4 /* Place.swift */,
 				F3EFF2282C9312E800A2D6B4 /* SocialType.swift */,
+				F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */,
 				F3EFF22C2C9314A300A2D6B4 /* CandidatePlace.swift */,
 			);
 			path = Entity;
@@ -754,6 +757,7 @@
 				F317D3452C88CDC70010FC3B /* Helper+PretendardFont.swift in Sources */,
 				F317D3332C88CC910010FC3B /* TempResponse.swift in Sources */,
 				F317D31D2C88CB0B0010FC3B /* TempUseCase.swift in Sources */,
+				F38ED1DB2C934C1F003AD5BC /* MeetingStatus.swift in Sources */,
 				F30DA9F72C911E7B001FB617 /* Meeting.swift in Sources */,
 				F317D32E2C88CC3C0010FC3B /* NetworkError.swift in Sources */,
 				F317D3312C88CC730010FC3B /* TempRequest.swift in Sources */,
