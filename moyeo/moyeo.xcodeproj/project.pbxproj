@@ -41,6 +41,7 @@
 		F317D3452C88CDC70010FC3B /* Helper+PretendardFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3442C88CDC70010FC3B /* Helper+PretendardFont.swift */; };
 		F359F4952C89835E00C91981 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F359F4942C89835E00C91981 /* MainView.swift */; };
 		F38ED1DB2C934C1F003AD5BC /* MeetingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */; };
+		F38ED1DD2C934D01003AD5BC /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38ED1DC2C934D01003AD5BC /* Role.swift */; };
 		F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7052C85EC030035BF02 /* moyeoApp.swift */; };
 		F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7072C85EC030035BF02 /* ContentView.swift */; };
 		F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7092C85EC040035BF02 /* Assets.xcassets */; };
@@ -117,6 +118,7 @@
 		F317D3442C88CDC70010FC3B /* Helper+PretendardFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+PretendardFont.swift"; sourceTree = "<group>"; };
 		F359F4942C89835E00C91981 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingStatus.swift; sourceTree = "<group>"; };
+		F38ED1DC2C934D01003AD5BC /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		F3DAC7022C85EC030035BF02 /* moyeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moyeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC7052C85EC030035BF02 /* moyeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoApp.swift; sourceTree = "<group>"; };
 		F3DAC7072C85EC030035BF02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				F3EFF2262C930FAD00A2D6B4 /* Member.swift */,
 				F3EFF22A2C9313C500A2D6B4 /* Place.swift */,
 				F3EFF2282C9312E800A2D6B4 /* SocialType.swift */,
+				F38ED1DC2C934D01003AD5BC /* Role.swift */,
 				F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */,
 				F3EFF22C2C9314A300A2D6B4 /* CandidatePlace.swift */,
 			);
@@ -769,6 +772,7 @@
 				F3EFF22B2C9313C500A2D6B4 /* Place.swift in Sources */,
 				F3EFF2252C929B5100A2D6B4 /* Helper+String.swift in Sources */,
 				F3EFF2272C930FAD00A2D6B4 /* Member.swift in Sources */,
+				F38ED1DD2C934D01003AD5BC /* Role.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
