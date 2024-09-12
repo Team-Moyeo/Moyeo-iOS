@@ -52,6 +52,7 @@
 		F3DAC75E2C8723170035BF02 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC75D2C8723170035BF02 /* Colors.xcassets */; };
 		F3EFF2252C929B5100A2D6B4 /* Helper+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */; };
 		F3EFF2272C930FAD00A2D6B4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2262C930FAD00A2D6B4 /* Member.swift */; };
+		F3EFF2292C9312E800A2D6B4 /* SocialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2282C9312E800A2D6B4 /* SocialType.swift */; };
 		FC65FB68E9CE20AF016071AE /* Pods_moyeoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,7 @@
 		F3DAC75D2C8723170035BF02 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+String.swift"; sourceTree = "<group>"; };
 		F3EFF2262C930FAD00A2D6B4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		F3EFF2282C9312E800A2D6B4 /* SocialType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialType.swift; sourceTree = "<group>"; };
 		F812A393E327E92ACBDCD526 /* Pods-moyeo-moyeoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo-moyeoUITests.debug.xcconfig"; path = "Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,6 +282,7 @@
 			children = (
 				F30DA9F62C911E7B001FB617 /* Meeting.swift */,
 				F3EFF2262C930FAD00A2D6B4 /* Member.swift */,
+				F3EFF2282C9312E800A2D6B4 /* SocialType.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 				F317D3122C88CA6F0010FC3B /* LoginView.swift in Sources */,
 				F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */,
 				F359F4952C89835E00C91981 /* MainView.swift in Sources */,
+				F3EFF2292C9312E800A2D6B4 /* SocialType.swift in Sources */,
 				F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */,
 				F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */,
 				F30DA9F92C912D0C001FB617 /* Helper+DateFormatter.swift in Sources */,

@@ -9,8 +9,7 @@ import Foundation
 
 struct Member {
     var id: Int
-    // TODO: SocialType 개발 이후 연결
-//    var socialType: SocialType
+    var socialType: SocialType
     var name: String
     var avatar: String
     var phoneNumber: String
@@ -18,16 +17,14 @@ struct Member {
     
     init(
         id: Int,
-        // TODO: SocialType 개발 이후 연결
-//        socialType: SocialType,
+        socialType: SocialType,
         name: String,
         avatar: String,
         phoneNumber: String,
         email: String
     ) {
         self.id = id
-        // TODO: SocialType 개발 이후 연결
-//        self.socialType = socialType
+        self.socialType = socialType
         self.name = name
         self.avatar = avatar
         self.phoneNumber = phoneNumber
