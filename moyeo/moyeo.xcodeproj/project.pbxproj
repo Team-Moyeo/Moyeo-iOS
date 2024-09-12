@@ -26,7 +26,6 @@
 		F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D30C2C88C77E0010FC3B /* SystemImage.swift */; };
 		F317D3122C88CA6F0010FC3B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3112C88CA6F0010FC3B /* LoginView.swift */; };
 		F317D3172C88CAA90010FC3B /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3162C88CAA90010FC3B /* Path.swift */; };
-		F317D31A2C88CAE60010FC3B /* TempEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3192C88CAE60010FC3B /* TempEntity.swift */; };
 		F317D31D2C88CB0B0010FC3B /* TempUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D31C2C88CB0B0010FC3B /* TempUseCase.swift */; };
 		F317D3202C88CB440010FC3B /* TempServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D31F2C88CB440010FC3B /* TempServiceInterface.swift */; };
 		F317D3232C88CB5F0010FC3B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D3222C88CB5F0010FC3B /* Constant.swift */; };
@@ -52,6 +51,7 @@
 		F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7552C8711EB0035BF02 /* Coordinator.swift */; };
 		F3DAC75E2C8723170035BF02 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC75D2C8723170035BF02 /* Colors.xcassets */; };
 		F3EFF2252C929B5100A2D6B4 /* Helper+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */; };
+		F3EFF2272C930FAD00A2D6B4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2262C930FAD00A2D6B4 /* Member.swift */; };
 		FC65FB68E9CE20AF016071AE /* Pods_moyeoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDAB5EDC15BE087835F28D6 /* Pods_moyeoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,7 +98,6 @@
 		F317D30C2C88C77E0010FC3B /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
 		F317D3112C88CA6F0010FC3B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F317D3162C88CAA90010FC3B /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		F317D3192C88CAE60010FC3B /* TempEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempEntity.swift; sourceTree = "<group>"; };
 		F317D31C2C88CB0B0010FC3B /* TempUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempUseCase.swift; sourceTree = "<group>"; };
 		F317D31F2C88CB440010FC3B /* TempServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempServiceInterface.swift; sourceTree = "<group>"; };
 		F317D3222C88CB5F0010FC3B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		F3DAC7552C8711EB0035BF02 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F3DAC75D2C8723170035BF02 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+String.swift"; sourceTree = "<group>"; };
+		F3EFF2262C930FAD00A2D6B4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F812A393E327E92ACBDCD526 /* Pods-moyeo-moyeoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo-moyeoUITests.debug.xcconfig"; path = "Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,8 +278,8 @@
 		F317D3182C88CACD0010FC3B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				F317D3192C88CAE60010FC3B /* TempEntity.swift */,
 				F30DA9F62C911E7B001FB617 /* Meeting.swift */,
+				F3EFF2262C930FAD00A2D6B4 /* Member.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -746,13 +746,13 @@
 				F317D31D2C88CB0B0010FC3B /* TempUseCase.swift in Sources */,
 				F30DA9F72C911E7B001FB617 /* Meeting.swift in Sources */,
 				F317D32E2C88CC3C0010FC3B /* NetworkError.swift in Sources */,
-				F317D31A2C88CAE60010FC3B /* TempEntity.swift in Sources */,
 				F317D3312C88CC730010FC3B /* TempRequest.swift in Sources */,
 				F317D3232C88CB5F0010FC3B /* Constant.swift in Sources */,
 				F317D32C2C88CC1E0010FC3B /* BaseResponse.swift in Sources */,
 				F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */,
 				F317D3202C88CB440010FC3B /* TempServiceInterface.swift in Sources */,
 				F3EFF2252C929B5100A2D6B4 /* Helper+String.swift in Sources */,
+				F3EFF2272C930FAD00A2D6B4 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
