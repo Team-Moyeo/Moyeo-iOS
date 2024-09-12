@@ -8,24 +8,32 @@
 import SwiftUI
 
 struct MainView: View {
+    // TODO: 목업 데이터 실제 데이터로 변경
+    @State var selectedTab: ConfirmState = .pending
+    let pendingMeetings: [Meeting] = MockDataBuilder.pendingMeetings
+    let confirmMeetings: [Meeting] = MockDataBuilder.confirmMeetings
+    
     @State private var inviteCode: String = ""
     var body: some View {
         VStack(spacing: 0) {
             Header(inviteCode: $inviteCode)
             Spacer()
                 .frame(height: 20)
-            ConfirmPicker(selectedTab: .pending)
+            ConfirmPicker(selectedTab: $selectedTab)
             Spacer()
-            // TODO: 리스트가 비어있다면 해당 뷰가 뜨도록 구현
-            if true {
-                EmptyListView()
-            }
+            MeetingList(pendingMeetings: pendingMeetings, confirmMeetings: confirmMeetings, selectedTab: $selectedTab)
             Spacer()
             CreateMeetingButton()
                 .frame(width: 360, height: 52)
         }
         .padding(10)
     }
+}
+
+
+enum ConfirmState: String, CaseIterable {
+    case pending = "진행중"
+    case confirm = "확정"
 }
 
 // MARK: - 헤더
@@ -136,12 +144,7 @@ private struct ProfileButton: View {
 // MARK: - 진행중/확정 Picker
 private struct ConfirmPicker: View {
     // TODO: 임시 변수 추후 수정 예정
-    @State var selectedTab: ConfirmState = .pending
-    
-    enum ConfirmState: String, CaseIterable {
-        case pending = "진행중"
-        case confirm = "확정"
-    }
+    @Binding var selectedTab: ConfirmState
     
     var body: some View {
         Picker("상태 선택", selection: $selectedTab) {
@@ -188,39 +191,75 @@ private struct CreateMeetingButton: View {
     }
 }
 
+// MARK: - 모임 리스트
+private struct MeetingList: View {
+    let pendingMeetings: [Meeting]
+    let confirmMeetings: [Meeting]
+    @Binding var selectedTab: ConfirmState
+    var body: some View {
+        ScrollView {
+            if selectedTab == ConfirmState.pending {
+                if pendingMeetings.isEmpty {
+                    EmptyListView()
+                } else {
+                    MeetingPendingList(pendingMeetings: pendingMeetings)
+                }
+            } else if selectedTab == ConfirmState.confirm {
+                if confirmMeetings.isEmpty {
+                    EmptyListView()
+                } else {
+                    MeetingConfirmList(confirmMeetings: confirmMeetings)
+                }
+            }
+        }
+    }
+}
+
 // MARK: - 모임 리스트 미확정 리스트
 private struct MeetingPendingList: View {
-    // 임시 데이터
-    struct PendingListCellInfo: Hashable {
-        var title: String
-        var deadline: String
-    }
     
-    var tempPendingList: [PendingListCellInfo] = [PendingListCellInfo(title: "오택동 첫 회식", deadline: "24.05.12"), PendingListCellInfo(title: "오택동 첫 회식", deadline: "24.05.12"), PendingListCellInfo(title: "오택동 첫 회식", deadline: "24.05.12"), PendingListCellInfo(title: "오택동 첫 회식", deadline: "24.05.12")]
+    let pendingMeetings: [Meeting]
     
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(tempPendingList, id: \.self) { cellInfo in
+            // TODO: 목업 데이터 실제 데이터로 변경
+            ForEach(pendingMeetings) { cellInfo in
                 Divider()
                 MeetingPendingListCell(title: cellInfo.title, deadline: cellInfo.deadline)
                 Divider()
             }
         }
     }
+}
+
+// MARK: - 모임 리스트 확정 리스트
+private struct MeetingConfirmList: View {
     
+    let confirmMeetings: [Meeting]
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            // TODO: 목업 데이터 실제 데이터로 변경
+            ForEach(confirmMeetings) { cellInfo in
+                Divider()
+                MeetingConfirmListCell(title: cellInfo.title, deadline: cellInfo.deadline, fixedTimes: [])
+                Divider()
+            }
+        }
+    }
 }
 
 // MARK: - 모임 리스트 미확정 셀
 private struct MeetingPendingListCell: View {
     var title: String
-    var deadline: String
+    var deadline: Date
     
     var body: some View {
         HStack(spacing: 0) {
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.Head.head5)
-                Text("\(deadline) 마감예정")
+                Text("\(deadline.totalYearMonthDayFormat) 마감예정")
                     .font(.Body.body5)
                     .foregroundStyle(Color.gray5)
             }
@@ -232,25 +271,33 @@ private struct MeetingPendingListCell: View {
 
 // MARK: - 모임 리스트 확정 셀
 private struct MeetingConfirmListCell: View {
+    var title: String
+    var deadline: Date
+    // TODO: 여러 날짜가 선택된 것에 대해서 어떻게 처리할지 고민 후 수정
+    var fixedTimes: [Date]
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("와인 동아리")
+                Text(title)
                     .font(.Head.head5)
-                Text("D-5")
+                Text(deadline.totalYearMonthDayFormat)
                     .font(.Body.body5)
                     .foregroundStyle(Color.gray5)
             }
             Spacer()
             VStack(alignment: .trailing) {
+                // TODO: 여러 날짜가 선택된 것에 대해서 어떻게 처리할지 고민 후 수정
                 Text("24. 05. 12 19:00")
                     .font(.Body.body5)
                     .foregroundStyle(Color.moyeoMain)
+                // TODO: Place Entity가 구현되면 추가 구현
                 Text("대동집 포항효자점")
                     .font(.Body.body5)
                     .foregroundStyle(Color.moyeoMain)
             }
         }
+        .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
     }
 }
 
@@ -259,13 +306,13 @@ private struct MeetingConfirmListCell: View {
 }
 
 #Preview {
-    MeetingPendingList()
+    MeetingPendingList(pendingMeetings: MockDataBuilder.pendingMeetings)
 }
 
 #Preview {
-    MeetingPendingListCell(title: "오택동 첫 회식", deadline: "24.05.12")
+    MeetingPendingListCell(title: "오택동 첫 회식", deadline: "24.05.12".toDate ?? Date())
 }
 
 #Preview {
-    MeetingConfirmListCell()
+    MeetingConfirmListCell(title: "오택동 첫 회식", deadline: "24.05.12".toDate ?? Date(), fixedTimes: [])
 }
