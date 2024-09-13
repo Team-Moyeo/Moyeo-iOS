@@ -11,6 +11,7 @@ import SwiftUI
 struct moyeoApp: App {
     
     @State private var tempIsLoginComplete: Bool = false
+    @State private var pathModel: PathModel = .init()
     
     var body: some Scene {
         WindowGroup {
@@ -21,5 +22,6 @@ struct moyeoApp: App {
                 MainView()
             }
         }
+        .environment(pathModel)
     }
 }
