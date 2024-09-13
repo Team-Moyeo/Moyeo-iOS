@@ -46,18 +46,24 @@ private struct Header: View {
             Image(.imgMoyeoWhite)
                 .resizable()
                 .scaledToFit()
-            Spacer()
-                .frame(width: 28)
-            InviteCodeButton(inviteCode: $inviteCode)
-                .frame(width: 100)
-            Spacer()
-                .frame(width: 8)
+            if !isSelectButtonClicked {
+                Spacer()
+                    .frame(width: 28)
+                InviteCodeButton(inviteCode: $inviteCode)
+                    .frame(width: 100)
+                Spacer()
+                    .frame(width: 8)
+            } else {
+                Spacer()
+            }
             SelectButton(isSelectButtonClicked: $isSelectButtonClicked)
                 .frame(width: 44)
-            Spacer()
-                .frame(width: 8)
-            ProfileButton()
-                .frame(width: 28)
+            if !isSelectButtonClicked {
+                Spacer()
+                    .frame(width: 8)
+                ProfileButton()
+                    .frame(width: 28)
+            }
         }
         .frame(height: 28)
     }
@@ -116,14 +122,21 @@ private struct SelectButton: View {
     var body: some View {
         Button {
             // TODO: 리스트 선택할 수 있도록 ON/OFF 구현
-            isSelectButtonClicked.toggle()
+            withAnimation {
+                isSelectButtonClicked.toggle()
+            }
         } label: {
             RoundedRectangle(cornerRadius: 8)
                 .foregroundStyle(.moyeoLightPink)
                 .overlay {
                     HStack {
-                        Text("선택")
-                            .foregroundStyle(.moyeoMain)
+                        if isSelectButtonClicked {
+                            Text("완료")
+                                .foregroundStyle(.moyeoMain)
+                        } else {
+                            Text("선택")
+                                .foregroundStyle(.moyeoMain)
+                        }
                     }
                 }
         }
@@ -288,7 +301,6 @@ private struct MeetingPendingListCell: View {
                             .frame(height: 24)
                     }
                 }
-                .animation(.easeIn)
                 Spacer()
                     .frame(width: 10)
             }
@@ -301,7 +313,6 @@ private struct MeetingPendingListCell: View {
             }
             Spacer()
         }
-        .animation(.easeInOut)
         .padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0))
     }
 }
@@ -333,7 +344,6 @@ private struct MeetingConfirmListCell: View {
                             .frame(height: 24)
                     }
                 }
-                .animation(.easeIn)
                 Spacer()
                     .frame(width: 10)
             }
@@ -356,7 +366,6 @@ private struct MeetingConfirmListCell: View {
                     .foregroundStyle(Color.moyeoMain)
             }
         }
-        .animation(.easeInOut)
         .padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0))
     }
 }

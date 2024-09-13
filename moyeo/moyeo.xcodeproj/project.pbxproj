@@ -42,6 +42,7 @@
 		F359F4952C89835E00C91981 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F359F4942C89835E00C91981 /* MainView.swift */; };
 		F38ED1DB2C934C1F003AD5BC /* MeetingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */; };
 		F38ED1DD2C934D01003AD5BC /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38ED1DC2C934D01003AD5BC /* Role.swift */; };
+		F3BF367E2C93EA010047C78E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF367D2C93EA010047C78E /* ProfileView.swift */; };
 		F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7052C85EC030035BF02 /* moyeoApp.swift */; };
 		F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7072C85EC030035BF02 /* ContentView.swift */; };
 		F3DAC70A2C85EC040035BF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC7092C85EC040035BF02 /* Assets.xcassets */; };
@@ -119,6 +120,7 @@
 		F359F4942C89835E00C91981 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingStatus.swift; sourceTree = "<group>"; };
 		F38ED1DC2C934D01003AD5BC /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		F3BF367D2C93EA010047C78E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F3DAC7022C85EC030035BF02 /* moyeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moyeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC7052C85EC030035BF02 /* moyeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoApp.swift; sourceTree = "<group>"; };
 		F3DAC7072C85EC030035BF02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		F317D30F2C88CA500010FC3B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F3BF367A2C93E9CB0047C78E /* Profile */,
 				F359F4932C89835400C91981 /* Main */,
 				F317D3102C88CA5F0010FC3B /* Login */,
 			);
@@ -403,6 +406,14 @@
 				F359F4942C89835E00C91981 /* MainView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		F3BF367A2C93E9CB0047C78E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F3BF367D2C93EA010047C78E /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F3DAC6F92C85EC020035BF02 = {
@@ -761,6 +772,7 @@
 				F317D3332C88CC910010FC3B /* TempResponse.swift in Sources */,
 				F317D31D2C88CB0B0010FC3B /* TempUseCase.swift in Sources */,
 				F38ED1DB2C934C1F003AD5BC /* MeetingStatus.swift in Sources */,
+				F3BF367E2C93EA010047C78E /* ProfileView.swift in Sources */,
 				F30DA9F72C911E7B001FB617 /* Meeting.swift in Sources */,
 				F317D32E2C88CC3C0010FC3B /* NetworkError.swift in Sources */,
 				F317D3312C88CC730010FC3B /* TempRequest.swift in Sources */,
