@@ -10,18 +10,19 @@ import SwiftUI
 struct MainView: View {
     // TODO: 목업 데이터 실제 데이터로 변경
     @State var selectedTab: ConfirmState = .pending
+    @State var isSelectButtonClicked: Bool = false
     let pendingMeetings: [Meeting] = MockDataBuilder.pendingMeetings
     let confirmMeetings: [Meeting] = MockDataBuilder.confirmMeetings
     
     @State private var inviteCode: String = ""
     var body: some View {
         VStack(spacing: 0) {
-            Header(inviteCode: $inviteCode)
+            Header(inviteCode: $inviteCode, isSelectButtonClicked: $isSelectButtonClicked)
             Spacer()
                 .frame(height: 20)
             ConfirmPicker(selectedTab: $selectedTab)
             Spacer()
-            MeetingList(selectedTab: $selectedTab)
+            MeetingList(selectedTab: $selectedTab, isSelectButtonClicked: $isSelectButtonClicked)
             Spacer()
             CreateMeetingButton()
                 .frame(width: 360, height: 52)
@@ -38,7 +39,8 @@ enum ConfirmState: String, CaseIterable {
 
 // MARK: - 헤더
 private struct Header: View {
-    @Binding private(set) var inviteCode: String
+    @Binding var inviteCode: String
+    @Binding var isSelectButtonClicked: Bool
     var body: some View {
         HStack(spacing: 0) {
             Image(.imgMoyeoWhite)
@@ -50,7 +52,7 @@ private struct Header: View {
                 .frame(width: 100)
             Spacer()
                 .frame(width: 8)
-            SelectButton()
+            SelectButton(isSelectButtonClicked: $isSelectButtonClicked)
                 .frame(width: 44)
             Spacer()
                 .frame(width: 8)
@@ -110,10 +112,11 @@ private struct InviteCodeButton: View {
 
 // MARK: - 선택 버튼
 private struct SelectButton: View {
+    @Binding private(set) var isSelectButtonClicked: Bool
     var body: some View {
         Button {
             // TODO: 리스트 선택할 수 있도록 ON/OFF 구현
-            
+            isSelectButtonClicked.toggle()
         } label: {
             RoundedRectangle(cornerRadius: 8)
                 .foregroundStyle(.moyeoLightPink)
@@ -144,7 +147,7 @@ private struct ProfileButton: View {
 // MARK: - 진행중/확정 Picker
 private struct ConfirmPicker: View {
     // TODO: 임시 변수 추후 수정 예정
-    @Binding var selectedTab: ConfirmState
+    @Binding private(set) var selectedTab: ConfirmState
     
     var body: some View {
         Picker("상태 선택", selection: $selectedTab) {
@@ -196,18 +199,19 @@ private struct MeetingList: View {
     @State private var pendingMeetings: [Meeting] = MockDataBuilder.pendingMeetings
     @State private var confirmMeetings: [Meeting] = MockDataBuilder.confirmMeetings
     @Binding var selectedTab: ConfirmState
+    @Binding var isSelectButtonClicked: Bool
     var body: some View {
         if selectedTab == ConfirmState.pending {
             if pendingMeetings.isEmpty {
                 EmptyListView()
             } else {
-                MeetingPendingList(pendingMeetings: $pendingMeetings)
+                MeetingPendingList(pendingMeetings: $pendingMeetings, isSelectButtonClicked: $isSelectButtonClicked)
             }
         } else if selectedTab == ConfirmState.confirm {
             if confirmMeetings.isEmpty {
                 EmptyListView()
             } else {
-                MeetingConfirmList(confirmMeetings: $confirmMeetings)
+                MeetingConfirmList(confirmMeetings: $confirmMeetings, isSelectButtonClicked: $isSelectButtonClicked)
             }
         }
     }
@@ -216,13 +220,14 @@ private struct MeetingList: View {
 // MARK: - 모임 리스트 미확정 리스트
 private struct MeetingPendingList: View {
     
-    @Binding var pendingMeetings: [Meeting]
+    @Binding private(set) var pendingMeetings: [Meeting]
+    @Binding var isSelectButtonClicked: Bool
     
     var body: some View {
         List {
             // TODO: 목업 데이터 실제 데이터로 변경
             ForEach(pendingMeetings) { cellInfo in
-                MeetingPendingListCell(title: cellInfo.title, deadline: cellInfo.deadline)
+                MeetingPendingListCell(isSelectButtonClicked: $isSelectButtonClicked, title: cellInfo.title, deadline: cellInfo.deadline)
             }
             .onDelete(perform: deleteItems)
         }
@@ -238,13 +243,14 @@ private struct MeetingPendingList: View {
 // MARK: - 모임 리스트 확정 리스트
 private struct MeetingConfirmList: View {
     
-    @Binding var confirmMeetings: [Meeting]
+    @Binding private(set) var confirmMeetings: [Meeting]
+    @Binding var isSelectButtonClicked: Bool
     
     var body: some View {
         List {
             // TODO: 목업 데이터 실제 데이터로 변경
             ForEach(confirmMeetings) { cellInfo in
-                MeetingConfirmListCell(title: cellInfo.title, deadline: cellInfo.deadline, fixedTimes: [])
+                MeetingConfirmListCell(isSelectButtonClicked: $isSelectButtonClicked, title: cellInfo.title, deadline: cellInfo.deadline, fixedTimes: [])
             }
             .onDelete(perform: deleteItems)
         }
@@ -259,12 +265,34 @@ private struct MeetingConfirmList: View {
 
 // MARK: - 모임 리스트 미확정 셀
 private struct MeetingPendingListCell: View {
+    @Binding var isSelectButtonClicked: Bool
+    @State private(set) var isSelected: Bool = false
     var title: String
     var deadline: Date
     
     var body: some View {
         HStack(spacing: 0) {
-            VStack(alignment: .leading) {
+            if isSelectButtonClicked {
+                Button {
+                    isSelected.toggle()
+                } label: {
+                    if isSelected {
+                        Image(.imgCheckCircle)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 24)
+                    } else {
+                        Image(.imgEmptyCircle)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 24)
+                    }
+                }
+                .animation(.easeIn)
+                Spacer()
+                    .frame(width: 10)
+            }
+            VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.Head.head5)
                 Text("\(deadline.totalYearMonthDayFormat) 마감예정")
@@ -273,12 +301,15 @@ private struct MeetingPendingListCell: View {
             }
             Spacer()
         }
-        .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
+        .animation(.easeInOut)
+        .padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0))
     }
 }
 
 // MARK: - 모임 리스트 확정 셀
 private struct MeetingConfirmListCell: View {
+    @Binding var isSelectButtonClicked: Bool
+    @State private(set) var isSelected: Bool = false
     var title: String
     var deadline: Date
     // TODO: 여러 날짜가 선택된 것에 대해서 어떻게 처리할지 고민 후 수정
@@ -286,7 +317,27 @@ private struct MeetingConfirmListCell: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
+            if isSelectButtonClicked {
+                Button {
+                    isSelected.toggle()
+                } label: {
+                    if isSelected {
+                        Image(.imgCheckCircle)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 24)
+                    } else {
+                        Image(.imgEmptyCircle)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 24)
+                    }
+                }
+                .animation(.easeIn)
+                Spacer()
+                    .frame(width: 10)
+            }
+            VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.Head.head5)
                 Text(deadline.totalYearMonthDayFormat)
@@ -305,7 +356,8 @@ private struct MeetingConfirmListCell: View {
                     .foregroundStyle(Color.moyeoMain)
             }
         }
-        .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
+        .animation(.easeInOut)
+        .padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0))
     }
 }
 
@@ -314,13 +366,13 @@ private struct MeetingConfirmListCell: View {
 }
 
 #Preview {
-    MeetingPendingList(pendingMeetings: .constant(MockDataBuilder.pendingMeetings))
+    MeetingPendingList(pendingMeetings: .constant(MockDataBuilder.pendingMeetings), isSelectButtonClicked: .constant(false))
 }
 
 #Preview {
-    MeetingPendingListCell(title: "오택동 첫 회식", deadline: "24.05.12".toDate ?? Date())
+    MeetingPendingListCell(isSelectButtonClicked: .constant(false), title: "오택동 첫 회식", deadline: "24.05.12".toDate ?? Date())
 }
 
 #Preview {
-    MeetingConfirmListCell(title: "오택동 첫 회식", deadline: "24.05.12".toDate ?? Date(), fixedTimes: [])
+    MeetingConfirmListCell(isSelectButtonClicked: .constant(false), title: "오택동 첫 회식", deadline: "24.05.12".toDate ?? Date(), fixedTimes: [])
 }
