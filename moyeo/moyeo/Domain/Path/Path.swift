@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum RegisterPath: Hashable {
-    
+enum ProfileSettingPath: Hashable {
+    case profileView
 }
 
 @Observable
 final class PathModel {
-    
+    var profileSettingPath: [ProfileSettingPath] = []
 }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @Environment(PathModel.self) private var pathModel
+    
     // TODO: 목업 데이터 실제 데이터로 변경
     @State var selectedTab: ConfirmState = .pending
     @State var isSelectButtonClicked: Bool = false
@@ -16,18 +19,31 @@ struct MainView: View {
     
     @State private var inviteCode: String = ""
     var body: some View {
-        VStack(spacing: 0) {
-            Header(inviteCode: $inviteCode, isSelectButtonClicked: $isSelectButtonClicked)
-            Spacer()
-                .frame(height: 20)
-            ConfirmPicker(selectedTab: $selectedTab)
-            Spacer()
-            MeetingList(selectedTab: $selectedTab, isSelectButtonClicked: $isSelectButtonClicked)
-            Spacer()
-            CreateMeetingButton()
-                .frame(width: 360, height: 52)
+        @Bindable var pathModel = pathModel
+        NavigationStack(path: $pathModel.profileSettingPath) {
+            VStack(spacing: 0) {
+                Header(inviteCode: $inviteCode, isSelectButtonClicked: $isSelectButtonClicked)
+                Spacer()
+                    .frame(height: 20)
+                ConfirmPicker(selectedTab: $selectedTab)
+                Spacer()
+                MeetingList(selectedTab: $selectedTab, isSelectButtonClicked: $isSelectButtonClicked)
+                Spacer()
+                CreateMeetingButton()
+                    .frame(width: 360, height: 52)
+            }
+            .padding(10)
+            .navigationDestination(for: ProfileSettingPath.self) { path in
+                switch path {
+                case .profileView:
+                    ProfileView()
+                        .toolbarRole(.editor)
+                }
+            }
         }
-        .padding(10)
+        // TODO: .tint() 여기다 붙이는게 맞는지 확인 필요
+        .tint(.moyeoMain)
+        .environment(pathModel)
     }
 }
 
@@ -145,15 +161,17 @@ private struct SelectButton: View {
 
 // MARK: - 프로필 버튼
 private struct ProfileButton: View {
+    @Environment(PathModel.self) private var pathModel
     var body: some View {
         Button {
             // TODO: 프로필 뷰로 이동할 수 있도록 구현
-            
+            pathModel.profileSettingPath.append(.profileView)
         } label: {
             Image(.imgProfile)
                 .resizable()
                 .frame(width: 28, height: 28)
         }
+        .environment(pathModel)
     }
 }
 
@@ -372,6 +390,7 @@ private struct MeetingConfirmListCell: View {
 
 #Preview {
     MainView()
+        .environment(PathModel())
 }
 
 #Preview {
