@@ -36,4 +36,13 @@ extension Date {
         formatter.dateFormat = "yy.MM.dd"
         return formatter.string(from: self)
     }
+    
+    
+    // 날짜 형식 변환을 위한 함수
+    var deadlineFormatted:  String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy년 M월 d일 (E)"
+        return formatter.string(from: self)
+    }
 }

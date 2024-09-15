@@ -23,7 +23,7 @@ struct ProfileView: View {
 }
 
 // MARK: - 프로필 사진
-struct ProfileImage: View {
+private struct ProfileImage: View {
     var body: some View {
         Button {
             
@@ -53,7 +53,7 @@ struct ProfileImage: View {
 }
 
 // MARK: - 개인정보 뷰
-struct PersonalInfomation: View {
+private struct PersonalInfomation: View {
     
     var body: some View {
         Section {
@@ -83,7 +83,7 @@ struct PersonalInfomation: View {
 }
 
 // MARK: - 계정 설정
-struct AccountSetting: View {
+private struct AccountSetting: View {
     @State private var isSignOutAlertPresented: Bool = false
     @State private var isResignAlertPresented: Bool = false
     

@@ -17,4 +17,5 @@ enum SystemImage {
     static let editMyProfile = "pencil"
     static let checkMark = "checkmark"
     static let emptyMark = "circle"
+    static let loadingParticipant = "person.fill"
 }

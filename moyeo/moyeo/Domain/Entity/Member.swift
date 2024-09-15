@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Member {
+protocol Client {
+    var name: String { get set}
+    var avatar: String { get set}
+}
+
+struct Member: Client {
     var id: Int
     var socialType: SocialType
     var name: String
@@ -29,5 +34,21 @@ struct Member {
         self.avatar = avatar
         self.phoneNumber = phoneNumber
         self.email = email
+    }
+}
+
+struct Participant: Client, Identifiable {
+    var id: Int
+    var name: String
+    var avatar: String
+    
+    init(
+        id: Int,
+        name: String,
+        avatar: String
+    ) {
+        self.id = id
+        self.name = name
+        self.avatar = avatar
     }
 }
