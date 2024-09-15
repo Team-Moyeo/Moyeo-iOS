@@ -13,11 +13,9 @@ struct GroupSetView: View {
             sheetTitle()
             groupSetForm()
             startGroupButton()
-            
-            Spacer()
-                .frame(height: 25)
-            
-        }.onAppear {
+        }
+        .background(.gray1)
+        .onAppear {
             UITextField.appearance().clearButtonMode = .whileEditing
         }
     }
@@ -28,6 +26,8 @@ private struct sheetTitle: View {
     var body: some View {
         Text("모임 생성하기")
             .font(.Head.head5)
+            .foregroundStyle(.black)
+            .padding(11)
     }
 }
 
@@ -40,6 +40,8 @@ private struct groupSetForm: View {
             groupPlaceSection()
             voteDeadlineSection()
         }
+        .scrollContentBackground(.hidden)
+
     }
 }
 
@@ -49,9 +51,10 @@ private struct groupNameSection: View {
     
     var body: some View {
         Section {
-            HStack {
+            HStack{
                 Text("모임명")
                 TextField("", text: $groupName)
+                    .multilineTextAlignment(.leading)
             }
         }
     }
@@ -61,7 +64,8 @@ private struct groupNameSection: View {
 private struct groupTimeSection: View {
     @State private var timeVoting = false
     @State private var fixedGroupTime = Date()
-    @State private var dateRange = Date()
+    @State private var startDate = Date()
+    @State private var endDate = Date()
     @State private var startTimeRange = Date()
     @State private var endTimeRange = Date()
     
@@ -74,8 +78,10 @@ private struct groupTimeSection: View {
             if !timeVoting {
                 //TODO: default 3시간 이후
                 DatePicker("시간", selection: $fixedGroupTime)
+                    .accentColor(.accent)
             } else {
-                DatePicker("날짜 범위", selection: $dateRange)
+                DatePicker("시작 날짜", selection: $startDate, displayedComponents: .date)
+                DatePicker("끝 날짜", selection: $endDate, displayedComponents: .date)
                 HStack(spacing: 0) {
                     DatePicker("시간 범위", selection: $startTimeRange, displayedComponents: .hourAndMinute)
                     Text(" ~ ")
@@ -101,7 +107,16 @@ private struct groupPlaceSection: View {
             })
             
             if !placeVoting {
-                Text("장소")
+                HStack {
+                    Text("장소")
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Text("장소를 선택해주세요.")
+                            .foregroundStyle(.gray5)
+                    }
+                }
             } else {
                 Button {
                     self.isMapSheetPresented.toggle()
