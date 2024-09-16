@@ -11,6 +11,10 @@ enum ProfileSettingPath: Hashable {
     case profileView
 }
 
+enum MeetingVotePath: Hashable {
+    case meetingVoteView
+}
+
 @Observable
 final class PathModel {
     var profileSettingPath: [ProfileSettingPath] = []

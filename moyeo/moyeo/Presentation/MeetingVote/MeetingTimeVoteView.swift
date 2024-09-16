@@ -1,5 +1,5 @@
 //
-//  GroupTimeVoteView.swift
+//  MeetingTimeVoteView.swift
 //  moyeo
 //
 //  Created by kyungsoolee on 9/15/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GroupTimeVoteView: View {
+struct MeetingTimeVoteView: View {
     @State private var isSelectButtonClicked: Bool = false
     var meeting: Meeting
     var body: some View {
@@ -223,7 +223,7 @@ func calculateCellCount(startTime: Date, endTime: Date) -> Int {
 }
 
 #Preview {
-    GroupTimeVoteView(meeting: MockDataBuilder.meeting)
+    MeetingTimeVoteView(meeting: MockDataBuilder.meeting)
 }
 
 #Preview {

@@ -54,8 +54,8 @@
 		F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7532C8711D80035BF02 /* NaverMap.swift */; };
 		F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7552C8711EB0035BF02 /* Coordinator.swift */; };
 		F3DAC75E2C8723170035BF02 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC75D2C8723170035BF02 /* Colors.xcassets */; };
-		F3DF4E5B2C96DB710097DB3C /* GroupVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF4E5A2C96DB710097DB3C /* GroupVoteView.swift */; };
-		F3DF4E5D2C96F40A0097DB3C /* GroupTimeVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF4E5C2C96F40A0097DB3C /* GroupTimeVoteView.swift */; };
+		F3DF4E5B2C96DB710097DB3C /* MeetingVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF4E5A2C96DB710097DB3C /* MeetingVoteView.swift */; };
+		F3DF4E5D2C96F40A0097DB3C /* MeetingTimeVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF4E5C2C96F40A0097DB3C /* MeetingTimeVoteView.swift */; };
 		F3DF4E5F2C9709200097DB3C /* TestGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF4E5E2C9709200097DB3C /* TestGridView.swift */; };
 		F3EFF2252C929B5100A2D6B4 /* Helper+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */; };
 		F3EFF2272C930FAD00A2D6B4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2262C930FAD00A2D6B4 /* Member.swift */; };
@@ -140,8 +140,8 @@
 		F3DAC7532C8711D80035BF02 /* NaverMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMap.swift; sourceTree = "<group>"; };
 		F3DAC7552C8711EB0035BF02 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F3DAC75D2C8723170035BF02 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		F3DF4E5A2C96DB710097DB3C /* GroupVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVoteView.swift; sourceTree = "<group>"; };
-		F3DF4E5C2C96F40A0097DB3C /* GroupTimeVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTimeVoteView.swift; sourceTree = "<group>"; };
+		F3DF4E5A2C96DB710097DB3C /* MeetingVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingVoteView.swift; sourceTree = "<group>"; };
+		F3DF4E5C2C96F40A0097DB3C /* MeetingTimeVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTimeVoteView.swift; sourceTree = "<group>"; };
 		F3DF4E5E2C9709200097DB3C /* TestGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGridView.swift; sourceTree = "<group>"; };
 		F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+String.swift"; sourceTree = "<group>"; };
 		F3EFF2262C930FAD00A2D6B4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 		F317D30F2C88CA500010FC3B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				F3DF4E592C96DB650097DB3C /* GroupVote */,
+				F3DF4E592C96DB650097DB3C /* MeetingVote */,
 				F3BF367A2C93E9CB0047C78E /* Profile */,
 				F359F4932C89835400C91981 /* Main */,
 				F317D3102C88CA5F0010FC3B /* Login */,
@@ -513,14 +513,14 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		F3DF4E592C96DB650097DB3C /* GroupVote */ = {
+		F3DF4E592C96DB650097DB3C /* MeetingVote */ = {
 			isa = PBXGroup;
 			children = (
-				F3DF4E5A2C96DB710097DB3C /* GroupVoteView.swift */,
-				F3DF4E5C2C96F40A0097DB3C /* GroupTimeVoteView.swift */,
+				F3DF4E5A2C96DB710097DB3C /* MeetingVoteView.swift */,
+				F3DF4E5C2C96F40A0097DB3C /* MeetingTimeVoteView.swift */,
 				F3DF4E5E2C9709200097DB3C /* TestGridView.swift */,
 			);
-			path = GroupVote;
+			path = MeetingVote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -785,7 +785,7 @@
 				F359F4952C89835E00C91981 /* MainView.swift in Sources */,
 				F3EFF2292C9312E800A2D6B4 /* SocialType.swift in Sources */,
 				F3ADF7432C985F01002FAC88 /* CandidateTime.swift in Sources */,
-				F3DF4E5D2C96F40A0097DB3C /* GroupTimeVoteView.swift in Sources */,
+				F3DF4E5D2C96F40A0097DB3C /* MeetingTimeVoteView.swift in Sources */,
 				F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */,
 				F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */,
 				F30DA9F92C912D0C001FB617 /* Helper+DateFormatter.swift in Sources */,
@@ -797,7 +797,7 @@
 				F38ED1DB2C934C1F003AD5BC /* MeetingStatus.swift in Sources */,
 				F3BF367E2C93EA010047C78E /* ProfileView.swift in Sources */,
 				F30DA9F72C911E7B001FB617 /* Meeting.swift in Sources */,
-				F3DF4E5B2C96DB710097DB3C /* GroupVoteView.swift in Sources */,
+				F3DF4E5B2C96DB710097DB3C /* MeetingVoteView.swift in Sources */,
 				F317D32E2C88CC3C0010FC3B /* NetworkError.swift in Sources */,
 				F317D3312C88CC730010FC3B /* TempRequest.swift in Sources */,
 				F317D3232C88CB5F0010FC3B /* Constant.swift in Sources */,

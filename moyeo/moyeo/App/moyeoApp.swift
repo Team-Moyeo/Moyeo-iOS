@@ -21,7 +21,7 @@ struct moyeoApp: App {
 //            } else {
 //                MainView()
 //            }
-            GroupTimeVoteView(meeting: MockDataBuilder.meeting)
+            MeetingTimeVoteView(meeting: MockDataBuilder.meeting)
         }
         .environment(pathModel)
     }

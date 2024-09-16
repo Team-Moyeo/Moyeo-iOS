@@ -1,5 +1,5 @@
 //
-//  GroupVoteView.swift
+//  MeetingVoteView.swift
 //  moyeo
 //
 //  Created by kyungsoolee on 9/15/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GroupVoteView: View {
+struct MeetingVoteView: View {
     // TODO: 추후 UseCase.state 구현되면 변경 예정
     var meeting: Meeting = MockDataBuilder.meeting
     var participants: [Participant] = MockDataBuilder.participants
@@ -19,7 +19,7 @@ struct GroupVoteView: View {
             Spacer()
                 .frame(height: 20)
             Deadline(deadline: meeting.deadline)
-            GroupTimeVoteView(meeting: meeting)
+            MeetingTimeVoteView(meeting: meeting)
             Divider()
         }
     }
@@ -127,7 +127,7 @@ private struct Deadline: View {
 }
 
 #Preview {
-    GroupVoteView()
+    MeetingVoteView()
 }
 
 #Preview {
