@@ -17,6 +17,14 @@ extension Date {
         return formatter.string(from: self)
     }
     
+    /// 2024.08.15 포맷 문자열을 반환합니다.
+    var totalYearMonthDaySnakeFormat: String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: self)
+    }
+    
     /// 07/31/2024 포맷 문자열을 반환
     var monthDayYearFormat: String {
         let formatter = DateFormatter()

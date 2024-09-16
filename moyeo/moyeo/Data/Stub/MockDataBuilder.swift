@@ -182,12 +182,12 @@ struct MockDataBuilder {
             startDate: "2024-08-12".toDate ?? Date(),
             endDate: "2024-08-14".toDate ?? Date(),
             startTime: "09:00".toTime ?? Date(),
-            endTime: "24:00".toTime ?? Date(),
+            endTime: "12:00".toTime ?? Date(),
             fixedTimes: [
-                "2024-08-12 12:00".toDateTime ?? Date(),
-                "2024-08-12 12:30".toDateTime ?? Date(),
-                "2024-08-12 13:00".toDateTime ?? Date(),
-                "2024-08-12 13:30".toDateTime ?? Date()
+                "2024-08-12 09:00".toDateTime ?? Date(),
+                "2024-08-12 09:30".toDateTime ?? Date(),
+                "2024-08-12 10:00".toDateTime ?? Date(),
+                "2024-08-12 10:30".toDateTime ?? Date()
             ],
             fixedPlaceId: 1,
             deadline: "2024-08-10 09:00".toDateTime ?? Date(),

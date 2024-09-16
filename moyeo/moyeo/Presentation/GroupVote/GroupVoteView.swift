@@ -13,14 +13,15 @@ struct GroupVoteView: View {
     var participants: [Participant] = MockDataBuilder.participants
     
     var body: some View {
-        VStack {
+        ScrollView {
             Header(title: meeting.title, participants: participants)
             Divider()
             Spacer()
                 .frame(height: 20)
             Deadline(deadline: meeting.deadline)
+            GroupTimeVoteView(meeting: meeting)
+            Divider()
         }
-        .padding()
     }
 }
 
@@ -36,6 +37,7 @@ private struct Header: View {
             // TODO: 추후 실제 값으로 변경
             Participants(participants: participants)
         }
+        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
     }
 }
 
@@ -119,6 +121,7 @@ private struct Deadline: View {
         )
         .cornerRadius(8)
         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
+        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
     }
     
 }

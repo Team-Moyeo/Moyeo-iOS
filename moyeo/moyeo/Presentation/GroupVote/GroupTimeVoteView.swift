@@ -9,10 +9,11 @@ import SwiftUI
 
 struct GroupTimeVoteView: View {
     @State private var isSelectButtonClicked: Bool = false
+    var meeting: Meeting
     var body: some View {
         VStack {
             TimeHeader(isSelectButtonClicked: $isSelectButtonClicked)
-            TimeGrid()
+            TimeGrid(meeting: meeting)
         }
         .padding()
     }
@@ -63,16 +64,19 @@ private struct SelectButton: View {
 
 // MARK: - 시간 선택 그리드
 private struct TimeGrid: View {
+    var meeting: Meeting
     @State private var selectedCells: Set<CandidateTime> = [] // 선택된 셀을 저장할 집합
     
-    // TODO: 외부로 값 빼야함. (최대 7일까지만 가능하게 프론트에서 처리해야될 듯. / 백엔드에서도 7일 이상 차이나면 오류나게끔 처리. 애초에 프론트에서 7일 이상 차이나게 들어오지 못하게 설계해야됨.)
-    let tempColumnCount: Int = daysBetween(startDate: "2024-08-12".toDate ?? Date(), endDate: "2024-08-18".toDate ?? Date()) + 1
-    
-    let tempRowCount: Int = calculateCellCount(startTime: "09:00".toTime ?? Date(), endTime: "12:00".toTime ?? Date())
+
     
     var body: some View {
+        // TODO: 외부로 값 빼야함. (최대 7일까지만 가능하게 프론트에서 처리해야될 듯. / 백엔드에서도 7일 이상 차이나면 오류나게끔 처리. 애초에 프론트에서 7일 이상 차이나게 들어오지 못하게 설계해야됨.)
+        let tempColumnCount: Int = daysBetween(startDate: meeting.startDate, endDate: meeting.endDate) + 1
+        
+        let tempRowCount: Int = calculateCellCount(startTime: meeting.startTime, endTime: meeting.endTime)
+        
         // TODO: 이렇게 동작하는게 맞는지 검증 필요.. UseCase에서 빼는 방법도 있어보임
-        let gridCells = createGridData(startDate: "2024-08-12", endDate: "2024-08-18", startTime: "09:00", endTime: "12:00")
+        let gridCells = createGridData(startDate: meeting.startDate.totalYearMonthDaySnakeFormat, endDate: meeting.endDate.totalYearMonthDaySnakeFormat, startTime: meeting.startTime.hourMinuteFormat, endTime: meeting.endTime.hourMinuteFormat)
         
         // TODO: 이렇게 동작하는게 맞는지 검증 필요.. UseCase에서 빼는 방법도 있어보임
         // 외부에서 값을 받아와서 동적으로 GridItem 배열을 생성
@@ -105,13 +109,14 @@ private struct TimeGrid: View {
                                 .foregroundStyle(.gray7)
                         }
 //                        Text(cell.dateTime.dateTimeFormat)
-                        Color(selectedCells.contains(cell) ? .red : .clear)
+                        Color(selectedCells.contains(cell) ? Color.moyeoMain : .clear)
                             .overlay {
                                 RoundedRectangle(cornerRadius: 5)
-                                    .stroke(.gray4, lineWidth: 2)
+                                    .stroke(selectedCells.contains(cell) ? .red : .gray4, lineWidth: 2)
                             }
                             .cornerRadius(5)
                             .frame(width: 50, height: 50)
+                            .opacity(selectedCells.contains(cell) ? 0.5 : 1)
                             .contentShape(Rectangle()) // 클릭할 수 있는 영역 명시
                     }
                     // TODO: TapGesture가 아닌 DragGesture로 해결할 수 있는 방법 고민.
@@ -218,7 +223,7 @@ func calculateCellCount(startTime: Date, endTime: Date) -> Int {
 }
 
 #Preview {
-    GroupTimeVoteView()
+    GroupTimeVoteView(meeting: MockDataBuilder.meeting)
 }
 
 #Preview {
@@ -226,5 +231,5 @@ func calculateCellCount(startTime: Date, endTime: Date) -> Int {
 }
 
 #Preview {
-    TimeGrid()
+    TimeGrid(meeting: MockDataBuilder.meeting)
 }
