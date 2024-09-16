@@ -107,7 +107,7 @@ private struct Deadline: View {
             Spacer()
             
             // 마감 기한 날짜 표시
-            Text(deadline.deadlineFormatted)
+            Text(deadline.deadlineFormat)
                 .font(.Body.body3)
                 .foregroundColor(.black)
         }

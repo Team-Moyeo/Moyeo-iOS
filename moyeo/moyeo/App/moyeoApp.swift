@@ -15,12 +15,13 @@ struct moyeoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            // TODO: true자리에 authUseCase.state.isLoginComplete로 자동 로그인 되게끔
-            if !tempIsLoginComplete {
-                LoginView(tempIsLoginComplete: $tempIsLoginComplete)
-            } else {
-                MainView()
-            }
+//            // TODO: true자리에 authUseCase.state.isLoginComplete로 자동 로그인 되게끔
+//            if !tempIsLoginComplete {
+//                LoginView(tempIsLoginComplete: $tempIsLoginComplete)
+//            } else {
+//                MainView()
+//            }
+            GroupTimeVoteView()
         }
         .environment(pathModel)
     }

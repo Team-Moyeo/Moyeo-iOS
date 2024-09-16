@@ -42,6 +42,7 @@
 		F359F4952C89835E00C91981 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F359F4942C89835E00C91981 /* MainView.swift */; };
 		F38ED1DB2C934C1F003AD5BC /* MeetingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */; };
 		F38ED1DD2C934D01003AD5BC /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38ED1DC2C934D01003AD5BC /* Role.swift */; };
+		F3ADF7432C985F01002FAC88 /* CandidateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ADF7422C985F01002FAC88 /* CandidateTime.swift */; };
 		F3BF367E2C93EA010047C78E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF367D2C93EA010047C78E /* ProfileView.swift */; };
 		F3DAC7062C85EC030035BF02 /* moyeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7052C85EC030035BF02 /* moyeoApp.swift */; };
 		F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7072C85EC030035BF02 /* ContentView.swift */; };
@@ -54,6 +55,8 @@
 		F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC7552C8711EB0035BF02 /* Coordinator.swift */; };
 		F3DAC75E2C8723170035BF02 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC75D2C8723170035BF02 /* Colors.xcassets */; };
 		F3DF4E5B2C96DB710097DB3C /* GroupVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF4E5A2C96DB710097DB3C /* GroupVoteView.swift */; };
+		F3DF4E5D2C96F40A0097DB3C /* GroupTimeVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF4E5C2C96F40A0097DB3C /* GroupTimeVoteView.swift */; };
+		F3DF4E5F2C9709200097DB3C /* TestGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF4E5E2C9709200097DB3C /* TestGridView.swift */; };
 		F3EFF2252C929B5100A2D6B4 /* Helper+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */; };
 		F3EFF2272C930FAD00A2D6B4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2262C930FAD00A2D6B4 /* Member.swift */; };
 		F3EFF2292C9312E800A2D6B4 /* SocialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFF2282C9312E800A2D6B4 /* SocialType.swift */; };
@@ -121,6 +124,7 @@
 		F359F4942C89835E00C91981 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingStatus.swift; sourceTree = "<group>"; };
 		F38ED1DC2C934D01003AD5BC /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		F3ADF7422C985F01002FAC88 /* CandidateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateTime.swift; sourceTree = "<group>"; };
 		F3BF367D2C93EA010047C78E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F3DAC7022C85EC030035BF02 /* moyeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moyeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC7052C85EC030035BF02 /* moyeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moyeoApp.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 		F3DAC7552C8711EB0035BF02 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F3DAC75D2C8723170035BF02 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F3DF4E5A2C96DB710097DB3C /* GroupVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVoteView.swift; sourceTree = "<group>"; };
+		F3DF4E5C2C96F40A0097DB3C /* GroupTimeVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTimeVoteView.swift; sourceTree = "<group>"; };
+		F3DF4E5E2C9709200097DB3C /* TestGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGridView.swift; sourceTree = "<group>"; };
 		F3EFF2242C929B5100A2D6B4 /* Helper+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+String.swift"; sourceTree = "<group>"; };
 		F3EFF2262C930FAD00A2D6B4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F3EFF2282C9312E800A2D6B4 /* SocialType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialType.swift; sourceTree = "<group>"; };
@@ -300,6 +306,7 @@
 				F3EFF2282C9312E800A2D6B4 /* SocialType.swift */,
 				F38ED1DC2C934D01003AD5BC /* Role.swift */,
 				F38ED1DA2C934C1F003AD5BC /* MeetingStatus.swift */,
+				F3ADF7422C985F01002FAC88 /* CandidateTime.swift */,
 				F3EFF22C2C9314A300A2D6B4 /* CandidatePlace.swift */,
 			);
 			path = Entity;
@@ -510,6 +517,8 @@
 			isa = PBXGroup;
 			children = (
 				F3DF4E5A2C96DB710097DB3C /* GroupVoteView.swift */,
+				F3DF4E5C2C96F40A0097DB3C /* GroupTimeVoteView.swift */,
+				F3DF4E5E2C9709200097DB3C /* TestGridView.swift */,
 			);
 			path = GroupVote;
 			sourceTree = "<group>";
@@ -767,6 +776,7 @@
 			files = (
 				F317D33B2C88CD0D0010FC3B /* StubTempService.swift in Sources */,
 				F317D33E2C88CD450010FC3B /* TempDTO.swift in Sources */,
+				F3DF4E5F2C9709200097DB3C /* TestGridView.swift in Sources */,
 				F317D3262C88CB8F0010FC3B /* NetworkManager.swift in Sources */,
 				F3DAC7562C8711EB0035BF02 /* Coordinator.swift in Sources */,
 				F317D3172C88CAA90010FC3B /* Path.swift in Sources */,
@@ -774,6 +784,8 @@
 				F3DAC7542C8711D80035BF02 /* NaverMap.swift in Sources */,
 				F359F4952C89835E00C91981 /* MainView.swift in Sources */,
 				F3EFF2292C9312E800A2D6B4 /* SocialType.swift in Sources */,
+				F3ADF7432C985F01002FAC88 /* CandidateTime.swift in Sources */,
+				F3DF4E5D2C96F40A0097DB3C /* GroupTimeVoteView.swift in Sources */,
 				F3DAC7082C85EC030035BF02 /* ContentView.swift in Sources */,
 				F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */,
 				F30DA9F92C912D0C001FB617 /* Helper+DateFormatter.swift in Sources */,

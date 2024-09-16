@@ -12,6 +12,8 @@ extension String {
     var toDate: Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
+        formatter.locale = Locale(identifier: "ko_KR")  // 한국 로케일 설정
+        formatter.timeZone = TimeZone(identifier: "Asia/Seoul")  // 한국 표준시 설정
         return formatter.date(from: self)
     }
     
@@ -19,6 +21,8 @@ extension String {
     var toTime: Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
+        formatter.locale = Locale(identifier: "ko_KR")  // 한국 로케일 설정
+        formatter.timeZone = TimeZone(identifier: "Asia/Seoul")  // 한국 표준시 설정
         return formatter.date(from: self)
     }
     
@@ -26,6 +30,8 @@ extension String {
     var toDateTime: Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        formatter.locale = Locale(identifier: "ko_KR")  // 한국 로케일 설정
+        formatter.timeZone = TimeZone(identifier: "Asia/Seoul")  // 한국 표준시 설정
         return formatter.date(from: self)
     }
 }
