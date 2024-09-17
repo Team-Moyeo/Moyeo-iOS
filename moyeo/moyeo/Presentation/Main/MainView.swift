@@ -20,7 +20,7 @@ struct MainView: View {
     @State private var inviteCode: String = ""
     var body: some View {
         @Bindable var pathModel = pathModel
-        NavigationStack(path: $pathModel.profileSettingPath) {
+        NavigationStack(path: $pathModel.mainPaths) {
             VStack(spacing: 0) {
                 Header(inviteCode: $inviteCode, isSelectButtonClicked: $isSelectButtonClicked)
                 Spacer()
@@ -33,11 +33,13 @@ struct MainView: View {
                     .frame(width: 360, height: 52)
             }
             .padding(10)
-            .navigationDestination(for: ProfileSettingPath.self) { path in
+            .navigationDestination(for: MainPath.self) { path in
                 switch path {
                 case .profileView:
                     ProfileView()
                         .toolbarRole(.editor)
+                case .meetingVoteView:
+                    MeetingVoteView()
                 }
             }
         }
@@ -165,7 +167,7 @@ private struct ProfileButton: View {
     var body: some View {
         Button {
             // TODO: 프로필 뷰로 이동할 수 있도록 구현
-            pathModel.profileSettingPath.append(.profileView)
+            pathModel.mainPaths.append(.profileView)
         } label: {
             Image(.imgProfile)
                 .resizable()
@@ -296,47 +298,57 @@ private struct MeetingConfirmList: View {
 
 // MARK: - 모임 리스트 미확정 셀
 private struct MeetingPendingListCell: View {
+    @Environment(PathModel.self) private var pathModel
     @Binding var isSelectButtonClicked: Bool
     @State private(set) var isSelected: Bool = false
     var title: String
     var deadline: Date
     
     var body: some View {
-        HStack(spacing: 0) {
-            if isSelectButtonClicked {
-                Button {
-                    isSelected.toggle()
-                } label: {
-                    if isSelected {
-                        Image(.imgCheckCircle)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 24)
-                    } else {
-                        Image(.imgEmptyCircle)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 24)
+        Button {
+            if !isSelectButtonClicked {
+                pathModel.mainPaths.append(.meetingVoteView)
+            }
+        } label: {
+            HStack(spacing: 0) {
+                if isSelectButtonClicked {
+                    Button {
+                        isSelected.toggle()
+                    } label: {
+                        if isSelected {
+                            Image(.imgCheckCircle)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 24)
+                        } else {
+                            Image(.imgEmptyCircle)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 24)
+                        }
                     }
+                    Spacer()
+                        .frame(width: 10)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(title)
+                        .font(.Head.head5)
+                    Text("\(deadline.totalYearMonthDayFormat) 마감예정")
+                        .font(.Body.body5)
+                        .foregroundStyle(Color.gray5)
                 }
                 Spacer()
-                    .frame(width: 10)
             }
-            VStack(alignment: .leading, spacing: 4) {
-                Text(title)
-                    .font(.Head.head5)
-                Text("\(deadline.totalYearMonthDayFormat) 마감예정")
-                    .font(.Body.body5)
-                    .foregroundStyle(Color.gray5)
-            }
-            Spacer()
+            .padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0))
         }
-        .padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0))
+        .environment(pathModel)
+        
     }
 }
 
 // MARK: - 모임 리스트 확정 셀
 private struct MeetingConfirmListCell: View {
+    @Environment(PathModel.self) private var pathModel
     @Binding var isSelectButtonClicked: Bool
     @State private(set) var isSelected: Bool = false
     var title: String
@@ -345,46 +357,54 @@ private struct MeetingConfirmListCell: View {
     var fixedTimes: [Date]
     
     var body: some View {
-        HStack {
-            if isSelectButtonClicked {
-                Button {
-                    isSelected.toggle()
-                } label: {
-                    if isSelected {
-                        Image(.imgCheckCircle)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 24)
-                    } else {
-                        Image(.imgEmptyCircle)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 24)
+        Button {
+            if !isSelectButtonClicked {
+                pathModel.mainPaths.append(.meetingVoteView)
+            }
+        } label: {
+            HStack {
+                if isSelectButtonClicked {
+                    Button {
+                        isSelected.toggle()
+                    } label: {
+                        if isSelected {
+                            Image(.imgCheckCircle)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 24)
+                        } else {
+                            Image(.imgEmptyCircle)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 24)
+                        }
                     }
+                    Spacer()
+                        .frame(width: 10)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(title)
+                        .font(.Head.head5)
+                    Text(deadline.totalYearMonthDayFormat)
+                        .font(.Body.body5)
+                        .foregroundStyle(Color.gray5)
                 }
                 Spacer()
-                    .frame(width: 10)
+                VStack(alignment: .trailing) {
+                    // TODO: 여러 날짜가 선택된 것에 대해서 어떻게 처리할지 고민 후 수정
+                    Text("24. 05. 12 19:00")
+                        .font(.Body.body5)
+                        .foregroundStyle(Color.moyeoMain)
+                    // TODO: Place Entity가 구현되면 추가 구현
+                    Text("대동집 포항효자점")
+                        .font(.Body.body5)
+                        .foregroundStyle(Color.moyeoMain)
+                }
             }
-            VStack(alignment: .leading, spacing: 4) {
-                Text(title)
-                    .font(.Head.head5)
-                Text(deadline.totalYearMonthDayFormat)
-                    .font(.Body.body5)
-                    .foregroundStyle(Color.gray5)
-            }
-            Spacer()
-            VStack(alignment: .trailing) {
-                // TODO: 여러 날짜가 선택된 것에 대해서 어떻게 처리할지 고민 후 수정
-                Text("24. 05. 12 19:00")
-                    .font(.Body.body5)
-                    .foregroundStyle(Color.moyeoMain)
-                // TODO: Place Entity가 구현되면 추가 구현
-                Text("대동집 포항효자점")
-                    .font(.Body.body5)
-                    .foregroundStyle(Color.moyeoMain)
-            }
+            .padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0))
         }
-        .padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0))
+        .environment(pathModel)
+        
     }
 }
 
@@ -395,12 +415,15 @@ private struct MeetingConfirmListCell: View {
 
 #Preview {
     MeetingPendingList(pendingMeetings: .constant(MockDataBuilder.pendingMeetings), isSelectButtonClicked: .constant(false))
+        .environment(PathModel())
 }
 
 #Preview {
     MeetingPendingListCell(isSelectButtonClicked: .constant(false), title: "오택동 첫 회식", deadline: "24.05.12".toDate ?? Date())
+        .environment(PathModel())
 }
 
 #Preview {
     MeetingConfirmListCell(isSelectButtonClicked: .constant(false), title: "오택동 첫 회식", deadline: "24.05.12".toDate ?? Date(), fixedTimes: [])
+        .environment(PathModel())
 }

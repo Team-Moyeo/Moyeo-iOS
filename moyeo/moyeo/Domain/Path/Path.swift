@@ -7,15 +7,12 @@
 
 import Foundation
 
-enum ProfileSettingPath: Hashable {
+enum MainPath: Hashable {
     case profileView
-}
-
-enum MeetingVotePath: Hashable {
     case meetingVoteView
 }
 
 @Observable
 final class PathModel {
-    var profileSettingPath: [ProfileSettingPath] = []
+    var mainPaths: [MainPath] = []
 }
