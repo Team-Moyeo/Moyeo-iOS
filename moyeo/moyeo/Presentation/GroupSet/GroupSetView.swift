@@ -76,19 +76,22 @@ private struct groupTimeSection: View {
             })
             
             if !timeVoting {
-                //TODO: default 3시간 이후
+                // TODO: default 3시간 이후
                 DatePicker("시간", selection: $fixedGroupTime)
                     .accentColor(.accent)
             } else {
                 DatePicker("시작 날짜", selection: $startDate, displayedComponents: .date)
-                DatePicker("끝 날짜", selection: $endDate, displayedComponents: .date)
+                DatePicker("끝 날짜", selection: $endDate, in: startDate...startDate.addingTimeInterval(7 * 86400), displayedComponents: .date)
+                
                 HStack(spacing: 0) {
                     DatePicker("시간 범위", selection: $startTimeRange, displayedComponents: .hourAndMinute)
                     Text(" ~ ")
-                    DatePicker("", selection: $endTimeRange, displayedComponents: .hourAndMinute).labelsHidden()
-                    
+                    DatePicker("", selection: $endTimeRange, in: startTimeRange..., displayedComponents: .hourAndMinute).labelsHidden()
                 }
             }
+        }
+        .onAppear {
+            UIDatePicker.appearance().minuteInterval = 30
         }
     }
 }
@@ -141,6 +144,9 @@ private struct voteDeadlineSection: View {
         Section {
             DatePicker("투표 마감 기한", selection: $voteDeadline)
         }
+        .onAppear {
+            UIDatePicker.appearance().minuteInterval = 30
+        }
     }
 }
 
@@ -159,6 +165,7 @@ private struct startGroupButton: View {
                 }
         }
         .padding(16)
+        .foregroundStyle(Color.moyeoMain)
     }
 }
 
