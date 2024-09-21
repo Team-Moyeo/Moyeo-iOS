@@ -11,6 +11,7 @@
 		6E7B22BB7AE411CBAC88FB8A /* Pods_moyeo_moyeoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7B03907A8C5A74ECC7A971 /* Pods_moyeo_moyeoUITests.framework */; };
 		F30DA9F72C911E7B001FB617 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30DA9F62C911E7B001FB617 /* Meeting.swift */; };
 		F30DA9F92C912D0C001FB617 /* Helper+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30DA9F82C912D0C001FB617 /* Helper+DateFormatter.swift */; };
+		B56EE4C32C91235700B736DF /* GroupSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56EE4C22C91235700B736DF /* GroupSetView.swift */; };
 		F317D2F32C88C18D0010FC3B /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F12C88C18D0010FC3B /* Secrets.xcconfig */; };
 		F317D2F42C88C18D0010FC3B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F22C88C18D0010FC3B /* README.md */; };
 		F317D3002C88C3850010FC3B /* Pretendard-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F317D2F72C88C3850010FC3B /* Pretendard-Medium.ttf */; };
@@ -83,6 +84,7 @@
 		4F7B03907A8C5A74ECC7A971 /* Pods_moyeo_moyeoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moyeo_moyeoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74827A874D944FA7AF9AB70F /* Pods-moyeo-moyeoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo-moyeoUITests.release.xcconfig"; path = "Target Support Files/Pods-moyeo-moyeoUITests/Pods-moyeo-moyeoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		92FA5BAC6289BF3AE3729A5E /* Pods-moyeo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeo.release.xcconfig"; path = "Target Support Files/Pods-moyeo/Pods-moyeo.release.xcconfig"; sourceTree = "<group>"; };
+		B56EE4C22C91235700B736DF /* GroupSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSetView.swift; sourceTree = "<group>"; };
 		B5FC1A7555860E9B50429C23 /* Pods_moyeo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moyeo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F056F3A2B3BA0F48217264 /* Pods-moyeoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeoTests.release.xcconfig"; path = "Target Support Files/Pods-moyeoTests/Pods-moyeoTests.release.xcconfig"; sourceTree = "<group>"; };
 		D39513F7C23DEDECCA09ED22 /* Pods-moyeoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moyeoTests.debug.xcconfig"; path = "Target Support Files/Pods-moyeoTests/Pods-moyeoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B56EE4C12C91234600B736DF /* GroupSet */ = {
+			isa = PBXGroup;
+			children = (
+				B56EE4C22C91235700B736DF /* GroupSetView.swift */,
+			);
+			path = GroupSet;
+			sourceTree = "<group>";
+		};
 		CAABB5BBCD2FDE3B07BE5EEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				F3BF367A2C93E9CB0047C78E /* Profile */,
+				B56EE4C12C91234600B736DF /* GroupSet */,
 				F359F4932C89835400C91981 /* Main */,
 				F317D3102C88CA5F0010FC3B /* Login */,
 			);
@@ -594,6 +605,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = F3DAC6F92C85EC020035BF02;
 			productRefGroup = F3DAC7032C85EC030035BF02 /* Products */;
@@ -767,6 +779,7 @@
 				F317D30D2C88C77E0010FC3B /* SystemImage.swift in Sources */,
 				F30DA9F92C912D0C001FB617 /* Helper+DateFormatter.swift in Sources */,
 				F317D3392C88CCED0010FC3B /* MockDataBuilder.swift in Sources */,
+				B56EE4C32C91235700B736DF /* GroupSetView.swift in Sources */,
 				F317D3292C88CBF80010FC3B /* TempService.swift in Sources */,
 				F317D3452C88CDC70010FC3B /* Helper+PretendardFont.swift in Sources */,
 				F317D3332C88CC910010FC3B /* TempResponse.swift in Sources */,
@@ -951,10 +964,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"moyeo/Preview Content\"";
-				DEVELOPMENT_TEAM = U5F437QJA7;
+				DEVELOPMENT_TEAM = 2WSJ3W54FF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = moyeo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "더 정확한 정보를 제공하기 위해 사용됩니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "더 정확한 정보를 제공하기 위해 사용됩니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -982,10 +997,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"moyeo/Preview Content\"";
-				DEVELOPMENT_TEAM = U5F437QJA7;
+				DEVELOPMENT_TEAM = 2WSJ3W54FF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = moyeo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "더 정확한 정보를 제공하기 위해 사용됩니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "더 정확한 정보를 제공하기 위해 사용됩니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
