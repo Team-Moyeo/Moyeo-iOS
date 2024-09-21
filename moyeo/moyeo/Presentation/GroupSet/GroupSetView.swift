@@ -76,7 +76,6 @@ private struct groupTimeSection: View {
             })
             
             if !timeVoting {
-                // TODO: default 3시간 이후
                 DatePicker("시간", selection: $fixedGroupTime)
                     .accentColor(.accent)
             } else {
