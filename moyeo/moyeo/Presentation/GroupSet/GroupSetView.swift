@@ -63,7 +63,7 @@ private struct groupNameSection: View {
 // MARK: - 모임 시간 섹션
 private struct groupTimeSection: View {
     @State private var timeVoting = false
-    @State private var fixedGroupTime = Date()
+    @State private var fixedGroupTime = Date().addingTimeInterval(3 * 3600)
     @State private var startDate = Date()
     @State private var endDate = Date()
     @State private var startTimeRange = Date()
